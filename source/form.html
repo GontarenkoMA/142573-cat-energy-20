@@ -42,7 +42,7 @@
         <p class="subtitle contact-form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
         <form class="contact-form__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="contact-form__section contact-form__section--about-cat">
-            <legend class="visually-hidden contact-form__section-title">Информация о коте</legend>
+            <legend class="visually-hidden">Информация о коте</legend>
             <label class="contact-form__input-label">
               Имя:<sup>*</sup>
               <input id="name-field" class="contact-form__input-field contact-form__input-field--name" type="text" name="name" placeholder="Барсик" autocomplete="on" required>
@@ -57,20 +57,20 @@
             </label>
           </fieldset>
 
-          <fieldset class="contact-form__section contact-form__section--programm">
-            <legend class="visually-hidden contact-form__section-title">Программа питания</legend>
-            <ul class="contact-form__programm-list">
-              <li class="contact-form__programm-item">
-                <input id="slim-programm" class="visually-hidden" type="radio" name="programm" value="slim" checked>
-                <label class="contact-form__input-label contact-form__input-label--radio" for="programm-slim">Похудение</label>
+          <fieldset class="contact-form__section contact-form__section--program">
+            <legend class="visually-hidden">Программа питания</legend>
+            <ul class="contact-form__program-list">
+              <li class="contact-form__program-item">
+                <input id="slim-program" class="visually-hidden" type="radio" name="program" value="slim" checked>
+                <label class="contact-form__input-label contact-form__input-label--radio" for="program-slim">Похудение</label>
               </li>
-              <li class="contact-form__programm-item">
-                <input id="pro-programm" class="visually-hidden" type="radio" name="programm" value="pro">
-                <label class="contact-form__input-label contact-form__input-label--radio" for="programm-pro">Набор массы</label>
+              <li class="contact-form__program-item">
+                <input id="pro-program" class="visually-hidden" type="radio" name="program" value="pro">
+                <label class="contact-form__input-label contact-form__input-label--radio" for="program-pro">Набор массы</label>
               </li>
-              <li class="contact-form__programm-item">
-                <input id="help-programm" class="visually-hidden" type="radio" name="programm" value="help">
-                <label class="contact-form__input-label contact-form__input-label--radio" for="programm-help">Не знаю (нужен ваш совет)</label>
+              <li class="contact-form__program-item">
+                <input id="help-program" class="visually-hidden" type="radio" name="program" value="help">
+                <label class="contact-form__input-label contact-form__input-label--radio" for="program-help">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
@@ -125,15 +125,15 @@
 
 
     <footer class="page-footer">
-      <section class="page-footer__contacts contacts">
-        <div class="contacts__wrapper">
+      <div class="page-footer__contacts contacts">
+        <div class="contacts__wrapper contacts__wrapper--index">
           <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
           <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8</address>
           <address class="contacts__address contacts__address--city">Санкт-Петербург</address>
         </div>
         <div id="map" class="contacts__map"></div>
-      </section>
-      <footer class="page-footer__footer-wrapper">
+      </div>
+      <div class="page-footer__wrapper">
         <a class="page-footer__title-link">
           <img src="img/logo-text-mobile.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
@@ -166,7 +166,7 @@
             <path class="page-footer__copyright-logo" d="M13.643.016L13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256zm0-11.564l-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237z" fill="#666"/>
           </svg>
         </div>
-      </footer>
+      </div>
     </footer>
   </body>
 </html>
