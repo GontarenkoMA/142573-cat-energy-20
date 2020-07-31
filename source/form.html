@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Кэт энерджи</title>
+    <title>Подбор программы</title>
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -16,9 +16,9 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
@@ -28,7 +28,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">
+            <a class="main-nav__link main-nav__link--active" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -37,92 +37,92 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Магазин функционального питания для котов "Кэт энерджи"</h1>
+      <section class="contact-form">
+        <h1 class="title contact-form__title">Подбор программы</h1>
+        <p class="subtitle contact-form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+        <form class="contact-form__form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="contact-form__section contact-form__section--about-cat">
+            <legend class="visually-hidden">Информация о коте</legend>
+            <label class="contact-form__input-label">
+              Имя:<sup>*</sup>
+              <input id="name-field" class="contact-form__input-field contact-form__input-field--name" type="text" name="name" placeholder="Барсик" autocomplete="on" required>
+            </label>
+            <label class="contact-form__input-label">
+              Вес (кг):<sup>*</sup>
+              <input id="weight-field" class="contact-form__input-field contact-form__input-field--weight" type="number" name="weight" placeholder="7" autocomplete="on" required>
+            </label>
+            <label class="contact-form__input-label">
+              Возраст (лет):
+              <input id="age-field" class="contact-form__input-field contact-form__input-field--age" type="number" name="age" placeholder="7" autocomplete="on">
+            </label>
+          </fieldset>
 
-      <section class="intro">
-        <div class="intro__wrapper">
-          <h2 class="title intro__title">Функциональное питание для котов</h2>
-          <p class="intro__slogan">Занялся собой? Займись котом!</p>
-          <img class="intro__picture" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Кэт энерджи: Курица (500 г)">
-          <a class="intro__link button" href="catalog.html">Подобрать программу</a>
-        </div>
-      </section>
+          <fieldset class="contact-form__section contact-form__section--program">
+            <legend class="visually-hidden">Программа питания</legend>
+            <ul class="contact-form__program-list">
+              <li class="contact-form__program-item">
+                <input id="program-slim" class="visually-hidden" type="radio" name="program" value="slim" checked>
+                <label class="contact-form__input-label contact-form__input-label--radio" for="program-slim">Похудение</label>
+              </li>
+              <li class="contact-form__program-item">
+                <input id="program-pro" class="visually-hidden" type="radio" name="program" value="pro">
+                <label class="contact-form__input-label contact-form__input-label--radio" for="program-pro">Набор массы</label>
+              </li>
+              <li class="contact-form__program-item">
+                <input id="program-help" class="visually-hidden" type="radio" name="program" value="help">
+                <label class="contact-form__input-label contact-form__input-label--radio" for="program-help">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
 
-      <section class="programs">
-        <h2 class="visually-hidden">Программы питания</h2>
-        <ul class="programs__list">
-          <li class="programs__item">
-            <div class="programs__program-wrapper programs__program-wrapper--slim">
-              <h3 class="programs__title">Похудение</h3>
-              <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="programs__link">Каталог Slim</a>
-            </div>
-          </li>
-          <li class="programs__item">
-            <div class="programs__program-wrapper programs__program-wrapper--pro">
-              <h3 class="programs__title">Набор массы</h3>
-              <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programs__link">Каталог Pro</a>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <fieldset class="contact-form__section contact-form__section--contacts">
+            <legend class="contact-form__section-title">Контактные данные (владельца кота)</legend>
+            <label class="contact-form__input-label">
+              E-mail:<sup>*</sup>
+              <input id="email-field" class="contact-form__input-field contact-form__input-field--email" type="email" name="email" placeholder="kuklachev@gmail.com" autocomplete="on" required>
+            </label>
+            <label class="contact-form__input-label">
+              Телефон:<sup>*</sup>
+              <input id="phone-field" class="contact-form__input-field contact-form__input-field--tel" type="tel" name="phone" placeholder="8 (960) 900-60-90" autocomplete="on" required>
+            </label>
+          </fieldset>
 
-      <section class="features">
-        <h2 class="title features__title">Как это работает</h2>
-        <ul class="features__list">
-          <li class="features__item features__item--substance">
-            <p class="features__description">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-          <li class="features__item features__item--powder">
-            <p class="features__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-          </li>
-          <li class="features__item features__item--meal">
-            <p class="features__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-          <li class="features__item features__item--time">
-            <p class="features__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-          </li>
-        </ul>
-      </section>
+          <fieldset class="contact-form__section contact-form__section--comment">
+            <legend class="contact-form__section-title">Комментарий</legend>
+            <label>
+              <span class="visually-hidden">Комментарий</span>
+              <textarea id="comment-field" class="contact-form__input-field contact-form__input-field--comment" name="comment" rows="5" placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
+            </label>
+          </fieldset>
 
-      <section class="example">
-        <div class="example__wrapper">
-          <h2 class="title example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="example__data-list">
-            <div class="example__data-item">
-              <dt class="example__number">5 кг</dt>
-              <dd class="example__description">снижение веса</dd>
-            </div>
-            <div class="example__data-item">
-              <dt class="example__number">60 дней</dt>
-              <dd class="example__description">затрачено времени</dd>
-            </div>
-          </dl>
-          <div class="example__sum">
-            <p class="example__sum-description">Затраты на питание:</p>
-            <p class="example__sum-number">15 000 руб.</p>
-          </div>
-          <div class="example__widget">
-            <div class="example__pictures-wrapper">
-              <div class="example__picture example__picture--before">
-                <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Кот До: толстый кот">
-              </div>
-              <div class="example__picture example__picture--after">
-                <img src="https://via.placeholder.com/252x240" width="252" height="240" alt="Кот После: стройный кот">
-              </div>
-            </div>
-            <button class="example__button example__button--before">Было</button>
-            <div class="example__range-wrapper">
-              <div class="example__range-line"></div>
-              <div class="example__range-control"></div>
-            </div>
-            <button class="example__button example__button--after">Стало</button>
-          </div>
-        </div>
+          <fieldset class="contact-form__section contact-form__section--additional-products">
+            <legend class="contact-form__section-title">Дополнительно</legend>
+            <ul class="contact-form__additional-products-list">
+              <li class="contact-form__additional-products-item">
+                <input id="sugar-item" class="visually-hidden" type="checkbox" name="sugar" checked>
+                <label class="contact-form__input-label contact-form__input-label--checkbox" for="sugar-item">Сахарозаменитель</label>
+              </li>
+              <li class="contact-form__additional-products-item">
+                <input id="water-item" class="visually-hidden" type="checkbox" name="water">
+                <label class="contact-form__input-label contact-form__input-label--checkbox" for="water-item">Питьевая вода</label>
+              </li>
+              <li class="contact-form__additional-products-item">
+                <input id="milk-item" class="visually-hidden" type="checkbox" name="milk">
+                <label class="contact-form__input-label contact-form__input-label--checkbox" for="milk-item">Молоко</label>
+              </li>
+              <li class="contact-form__additional-products-item">
+                <input id="vitamins-item" class="visually-hidden" type="checkbox" name="vitamins">
+                <label class="contact-form__input-label contact-form__input-label--checkbox" for="vitamins-item">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <input class="button contact-form__submit-button" type="submit" value="Отправить заявку">
+          <small class="contact-form__legend">* — Обязательные поля</small>
+        </form>
       </section>
     </main>
+
 
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
