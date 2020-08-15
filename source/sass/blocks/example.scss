@@ -1,0 +1,170 @@
+.example {
+  // А можно ли???!!!
+  position: relative;
+}
+
+.example__wrapper {
+  @media (min-width: $tablet) and (max-width: $desktop - 1px) {
+    border-top: 1px solid $nav-border;
+  }
+}
+
+.example__background {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  background: $basic-grey;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @media (max-width: $tablet) {
+    height: 100%;
+  }
+
+  @media (min-width: $tablet) {
+    height: 462px;
+  }
+}
+
+.example__title {
+  @media (max-width: $tablet) {
+    padding-top: 27px;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    padding-top: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 58px;
+  }
+}
+//
+// .example__text {
+// }
+//
+// .example__data-list {
+// }
+
+.example__data-item {
+  text-align: center;
+}
+
+.example__number {
+  padding: 0;
+  margin: 0;
+
+  @include text-title;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__description {
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: $tablet) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.example__sum {
+  @include text-title;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+
+  @media (max-width: $tablet) {
+    font-size: 14px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.example__sum-description {
+  display: inline-block;
+}
+
+.example__sum-number {
+  display: inline-block;
+}
+
+.example__widget {
+  text-align: center;
+}
+//
+// .example__pictures-wrapper {
+// }
+//
+// .example__picture {
+// }
+//
+// .example__picture--before {
+// }
+//
+// .example__picture--after {
+// }
+
+.example__button {
+  padding: 0;
+  margin: 0;
+  border-style: none;
+
+  @include text-title;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
+  border-bottom: 1px dotted rgba($basic-black, 0.24);
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid rgba($basic-black, 0.4);
+  }
+
+  &:active {
+    border-bottom: none;
+  }
+}
+//
+// .example__button--before {
+// }
+//
+// .example__button--after {
+// }
+
+.example__range-wrapper {
+  display: inline-block;
+}
+
+// .example__range-line {
+// }
+// .example__range-control {
+// }

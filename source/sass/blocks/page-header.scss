@@ -1,0 +1,81 @@
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (max-width: $tablet - 1px) {
+    border-bottom: 1px solid $nav-border;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: auto 1fr;
+
+    @include container;
+  }
+}
+
+.page-header_wrapper {
+  display: grid;
+
+  @media (max-width: $tablet - 1px) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include container;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+// тут надо будет подумать о логотипах
+.page-header__logo-link,
+.page-header__title-link {
+  &:hover,
+  &:focus {
+    opacity: $alpha80;
+  }
+
+  &:active {
+    opacity: $alpha60;
+  }
+}
+//
+// .page-header__logo-link {
+// }
+
+.page-header__title-link {
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.page-header__nav-toggle {
+  background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right;
+  border-style: none;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-size: 24px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.page-header__nav-toggle--close {
+  background-image: url("../img/icon-close.svg");
+  background-size: 18px;
+}
+
+.page-header__main-nav {
+  @media (max-width: $tablet) {
+    grid-column: 1 / span 3;
+  }
+
+  @media (min-width: $tablet) {
+    grid-column-end: -1;
+  }
+}

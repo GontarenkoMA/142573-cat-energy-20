@@ -3,32 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <meta name="keywords" content="">
+    <meta name="description" content=""> -->
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo-link">
-        <img src="img/logo-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
-      </a>
-      <a class="page-header__title-link">
-        <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+      <!-- сделать управление через css? в мобильной версии два логотипа, а других - один  -->
+
+      <div class="page-header_wrapper">
+        <a class="page-header__logo-link">
+          <img src="img/logo-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
+        </a>
+        <a class="page-header__title-link">
+          <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+        </a>
+        <button class="page-header__nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+      </div>
+      <nav class="page-header__main-nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">
+            <a class="main-nav__link main-nav__link--active main-nav__link--index">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">
+            <a class="main-nav__link main-nav__link--index" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">
+            <a class="main-nav__link main-nav__link--index" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -40,35 +47,37 @@
       <h1 class="visually-hidden">Магазин функционального питания для котов "Кэт энерджи"</h1>
 
       <section class="intro">
-        <div class="intro__wrapper">
-          <h2 class="title intro__title">Функциональное питание для котов</h2>
+        <div class="intro__wrapper container">
+          <h2 class="title intro__title">Функциональное<br>питание для котов</h2>
           <p class="intro__slogan">Занялся собой? Займись котом!</p>
-          <img class="intro__picture" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Кэт энерджи: Курица (500 г)">
-          <a class="intro__link button" href="catalog.html">Подобрать программу</a>
+          <!-- возможно, надо изменить на фоновую картинку -->
+          <img class="intro__picture" src="../img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энерджи: Курица (500&nbsp;г)">
+          <a class="button intro__link" href="catalog.html">Подобрать программу</a>
         </div>
+        <div class="intro__background"></div>
       </section>
 
-      <section class="programs">
+      <section class="programs container">
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="programs__list">
           <li class="programs__item">
             <div class="programs__program-wrapper programs__program-wrapper--slim">
               <h3 class="programs__title">Похудение</h3>
               <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="programs__link">Каталог Slim</a>
+              <a class="programs__link" href="catalog.html">Каталог Slim</a>
             </div>
           </li>
           <li class="programs__item">
             <div class="programs__program-wrapper programs__program-wrapper--pro">
               <h3 class="programs__title">Набор массы</h3>
               <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programs__link">Каталог Pro</a>
+              <a class="programs__link" href="catalog.html">Каталог Pro</a>
             </div>
           </li>
         </ul>
       </section>
 
-      <section class="features">
+      <section class="features container">
         <h2 class="title features__title">Как это работает</h2>
         <ul class="features__list">
           <li class="features__item features__item--substance">
@@ -87,7 +96,7 @@
       </section>
 
       <section class="example">
-        <div class="example__wrapper">
+        <div class="example__wrapper container">
           <h2 class="title example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <dl class="example__data-list">
@@ -121,20 +130,21 @@
             <button class="example__button example__button--after">Стало</button>
           </div>
         </div>
+        <div class="example__background"></div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
-        <div class="contacts__wrapper contacts__wrapper--index">
-          <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
-          <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8</address>
-          <address class="contacts__address contacts__address--city">Санкт-Петербург</address>
-        </div>
-        <div id="map" class="contacts__map"></div>
+      <div class="page-footer__contacts contacts contacts--index">
+          <div class="contacts__wrapper contacts__wrapper--index">
+            <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+            <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8</address>
+            <address class="contacts__address contacts__address--city">Санкт-Петербург</address>
+          </div>
+          <div id="map" class="contacts__map"></div>
       </div>
-      <div class="page-footer__wrapper">
-        <a class="page-footer__title-link">
+      <div class="container page-footer__wrapper">
+        <a class="page-footer__title-link page-footer__title-link--index">
           <img src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
         <ul class="page-footer__socials socials">
@@ -154,18 +164,18 @@
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" title="Фейсбук">
-              <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="socials__logo" d="M16.5 1.833h-2.75a4.63 4.63 0 00-3.24 1.317 4.45 4.45 0 00-1.343 3.177v2.697h-2.75v3.595h2.75v7.191h3.666v-7.19h2.75l.917-3.596h-3.667V6.327a.89.89 0 01.269-.635.926.926 0 01.648-.263h2.75V1.833z" stroke="#666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="socials__logo" fill-rule="evenodd" clip-rule="evenodd" d="M5.124 1.757A5.18 5.18 0 018.75.283h2.75a.55.55 0 01.55.55V4.43a.55.55 0 01-.55.55H8.75c-.1 0-.195.039-.263.106a.34.34 0 00-.104.242v2.147H11.5a.55.55 0 01.533.686l-.917 3.595a.55.55 0 01-.533.414h-2.2v6.64a.55.55 0 01-.55.55H4.167a.55.55 0 01-.55-.55v-6.64h-2.2a.55.55 0 01-.55-.55V8.024a.55.55 0 01.55-.55h2.2V5.327a5 5 0 011.507-3.57zm3.626-.374a4.08 4.08 0 00-2.856 1.16 3.9 3.9 0 00-1.177 2.784v2.697a.55.55 0 01-.55.55h-2.2v2.495h2.2a.55.55 0 01.55.55v6.64h2.566v-6.64a.55.55 0 01.55-.55h2.323l.636-2.495H7.833a.55.55 0 01-.55-.55V5.327c0-.387.158-.757.434-1.028.276-.27.647-.42 1.033-.42h2.2V1.383h-2.2z" fill="#666"/>
               </svg>
             </a>
           </li>
         </ul>
-        <div class="page-footer__copyright-wrapper">
+        <a class="page-footer__copyright-link" href="#">
           <p class="page-footer__copyright-text">HTML Academy</p>
           <svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="page-footer__copyright-logo" d="M13.643.016L13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256zm0-11.564l-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237z" fill="#666"/>
           </svg>
-        </div>
+        </a>
       </div>
     </footer>
   </body>

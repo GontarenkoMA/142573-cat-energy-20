@@ -1,0 +1,15 @@
+// примеси
+@mixin text-main {
+  font: {
+    family: "Arial", arial, sans-serif;
+    weight: 400;
+  }
+}
+
+@mixin text-title {
+  font: {
+    family: "Oswald", arial, sans-serif;
+    weight: 400;
+  }
+  color: $basic-black;
+}

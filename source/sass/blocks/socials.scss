@@ -1,0 +1,27 @@
+.socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+//
+// .socials__item {
+// }
+//
+// .socials__link {
+// }
+
+.socials__link {
+  &:hover,
+  &:focus,
+  &:active {
+    & .socials__logo {
+      fill: $basic-green;
+    }
+  }
+
+  &:active {
+    & .socials__logo {
+      opacity: $alpha30;
+    }
+  }
+}

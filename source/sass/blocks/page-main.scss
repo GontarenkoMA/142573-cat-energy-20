@@ -1,0 +1,19 @@
+// .page-main {
+// }
+//
+// .page-main__title {
+// }
+
+.page-main__title--catalog {
+  @media (max-width: $tablet) {
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 84px;
+  }
+}

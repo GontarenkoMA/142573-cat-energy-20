@@ -1,0 +1,145 @@
+// .features {
+// }
+//
+.features__title {
+  margin: 0;
+
+  @media (max-width: $tablet) {
+    margin-top: 27px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-top: 45px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 71px;
+    margin-bottom: 72px;
+  }
+}
+
+.features__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.features__item {
+  display: flex;
+  position: relative;
+  min-height: 60px;
+  margin: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    width: 230px;
+    min-height: 280px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin features__item--before {
+  content: "";
+  height: 60px;
+  width: 60px;
+  background-color: $basic-green;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet) {
+    margin-top: 40px;
+  }
+}
+
+.features__item--substance::before {
+  @include features__item--before;
+  background-image: url("../img/advantage-leaf@1x.svg");
+}
+
+.features__item--powder::before {
+  @include features__item--before;
+  background-image: url("../img/advantage-powder@1x.svg");
+}
+
+.features__item--meal::before {
+  @include features__item--before;
+  background-image: url("../img/advantage-dining@1x.svg");
+}
+
+.features__item--time::before {
+  @include features__item--before;
+  background-image: url("../img/advantage-clock@1x.svg");
+}
+
+@mixin features__item--after {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+
+  @include text-title;
+  font-size: 280px;
+  line-height: 280px;
+  color: $basic-grey;
+
+  @media (max-width: $tablet - 1px) {
+    display: none;
+  }
+}
+
+// вставлять нумерацию через css не правильно...
+.features__item--substance::after {
+  @include features__item--after;
+  content: "1";
+}
+
+.features__item--powder::after {
+  @include features__item--after;
+  content: "2";
+}
+
+.features__item--meal::after {
+  @include features__item--after;
+  content: "3";
+}
+
+.features__item--time::after {
+  @include features__item--after;
+  content: "4";
+}
+
+.features__description {
+  margin: 0;
+
+  @media (max-width: $tablet) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+    margin-top: 31px;
+  }
+}
