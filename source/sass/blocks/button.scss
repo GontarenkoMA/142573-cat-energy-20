@@ -1,0 +1,43 @@
+.button {
+  @include text-title;
+  background-color: $basic-green;
+  border-style: none;
+  color: $basic-white;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 10px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $green-btn-action;
+  }
+
+  &:active {
+    color: rgba($basic-white, $alpha30);
+    background-color: $green-btn-action;
+  }
+
+  &--modified {
+    color: $grey-text;
+    background-color: $basic-grey;
+
+    &:hover,
+    &:focus {
+      background-color: $grey-btn-action;
+    }
+
+    &:active {
+      color: rgba($grey-text, $alpha30);
+      background-color: $grey-btn-action;
+    }
+  }
+}

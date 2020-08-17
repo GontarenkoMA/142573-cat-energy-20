@@ -1,0 +1,107 @@
+.additional-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.additional-catalog__title {
+  font-size: 24px;
+  line-height: 24px;
+  width: 100%;
+}
+
+.additional-catalog__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.additional-catalog__item {
+  border-top: 1px solid $grey-border;
+  box-sizing: border-box;
+  padding: 13px 0 19px;
+
+  &:last-child {
+    border-bottom: 1px solid $grey-border;
+  }
+
+  @media (min-width: $tablet) {
+    border-left: 1px solid $grey-border;
+    border-right: 1px solid $grey-border;
+    padding: 26px 37px 28px 38px;
+  }
+
+  @media (min-width: $desktop) {
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 16px;
+  }
+}
+//
+// .additional-catalog__product {
+// }
+
+.additional-catalog__special-offer {
+  color: $basic-white;
+  background-color: $intro-green;
+  font-size: 16px;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  margin: 0;
+  margin-top: 39px;
+  min-height: 289px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    min-height: 200px;
+    margin-top: 69px;
+    text-align: left;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    margin-top: 0;
+    margin-left: 79px;
+    min-height: 289px;
+    min-width: 245px;
+    text-align: center;
+  }
+}
+
+.additional-catalog__special-offer::before {
+  content: url("../img/icon-gift.svg");
+  display: block;
+  height: 78px;
+  margin-top: 58px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+    margin-left: 78px;
+    margin-right: 265px;
+    margin-bottom: 5px;
+    width: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,124 @@
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid $nav-border;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    @include container;
+    grid-template-columns: auto 1fr;
+    border: none;
+    padding-top: 25px;
+    padding-bottom: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 54px;
+    padding-bottom: 29px;
+  }
+}
+
+.page-header_wrapper {
+  @include container;
+  display: grid;
+  min-height: 65px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: auto 1fr;
+    padding: 0;
+    margin: 0;
+    min-width: auto;
+    width: auto;
+    min-height: auto;
+  }
+}
+
+// тут надо будет подумать о логотипах
+.page-header__logo-link,
+.page-header__title-link {
+  &:hover,
+  &:focus {
+    opacity: $alpha80;
+  }
+
+  &:active {
+    opacity: $alpha60;
+  }
+}
+
+.page-header__logo-link {
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding-bottom: 6px;
+
+  @media (min-width: $tablet) {
+    width: 174px;
+    height: 60px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
+    height: 60px;
+  }
+}
+
+.page-header__title-link {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.page-header__logo-image {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.page-header__nav-toggle {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right;
+  border-style: none;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-size: 24px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  &--close {
+    background-image: url("../img/icon-close.svg");
+    background-size: 18px;
+  }
+}
+
+.page-header__main-nav {
+  grid-column: 1 / span 3;
+
+  @media (min-width: $tablet) {
+    grid-column: 2;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 5px;
+  }
+}

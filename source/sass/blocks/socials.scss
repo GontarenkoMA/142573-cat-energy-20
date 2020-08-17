@@ -1,0 +1,32 @@
+.socials {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 55px);
+  justify-content: center;
+  grid-row-gap: 20px;
+}
+
+.socials__item {
+  display: flex;
+  width: auto;
+  align-items: center;
+}
+
+.socials__link {
+  margin: auto;
+  display: flex;
+
+  &:hover,
+  &:focus,
+  &:active {
+    & .socials__logo {
+      fill: $basic-green;
+    }
+  }
+
+  &:active {
+    & .socials__logo {
+      opacity: $alpha30;
+    }
+  }
+}

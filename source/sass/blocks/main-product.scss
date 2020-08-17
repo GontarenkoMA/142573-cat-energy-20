@@ -1,0 +1,143 @@
+.main-product {
+  display: grid;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    justify-items: center;
+    padding: 0 37px 40px 39px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 38px 40px 39px;
+  }
+}
+
+.main-product__picture-wrapper {
+  display: flex;
+  min-width: 140px;
+  height: 112px;
+  grid-row: 1 / span 2;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 34px;
+    grid-row: 1;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    height: 196px;
+    margin-bottom: 46px;
+  }
+}
+
+.main-product__picture {
+  margin: auto;
+  //
+  // @media (min-width: $tablet) {
+  // }
+  //
+  // @media (min-width: $desktop) {
+  // }
+}
+
+.main-product__title {
+  @include text-title;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 14px;
+  width: 100px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 18px;
+    max-width: 145px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+.main-product__features {
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 16px;
+    width: 100%;
+  }
+
+  // тут будет хрень с выравниванием и стилизацией по элементам таблицы
+  & td {
+    margin: 0;
+    padding: 0;
+
+    &:nth-child(2) {
+      text-align: right;
+      margin-left: auto;
+    }
+  }
+
+  & tr {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    &:nth-child(3) td:nth-child(2) {
+      text-transform: uppercase;
+    }
+
+    @media (min-width: $tablet) {
+      padding-top: 7px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $grey-border;
+    }
+  }
+}
+
+.main-product__button {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+  margin-top: 13px;
+  grid-column: 1 / span 2;
+
+  @media (min-width: $tablet) {
+    margin-top: auto;
+    grid-column: 1;
+  }
+}
+
+.main-product__background {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    background-color: $basic-grey;
+    height: 430px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 431px;
+  }
+}

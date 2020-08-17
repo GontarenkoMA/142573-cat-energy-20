@@ -1,0 +1,76 @@
+// .page-main {
+// }
+//
+.page-main__title {
+  &--catalog {
+    margin-top: 27px;
+    margin-bottom: 41px;
+
+    @media (min-width: $tablet) {
+      margin-top: 45px;
+      margin-bottom: 83px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 42px;
+      margin-bottom: 84px;
+    }
+  }
+}
+
+.page-main__programs {
+  margin-top: 22px;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 82px;
+  }
+}
+
+.page-main__features {
+  margin-top: 27px;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    margin-top: 45px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 71px;
+    margin-bottom: 11px;
+  }
+}
+//
+// .page-main__main-catalog {
+// }
+
+.page-main__additional-catalog {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 86px;
+  }
+}
+
+.page-main__form {
+  margin-top: 27px;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    margin-top: 45px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 42px;
+    margin-bottom: 82px;
+  }
+}
