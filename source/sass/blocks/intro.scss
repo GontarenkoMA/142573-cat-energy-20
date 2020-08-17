@@ -7,58 +7,94 @@
 }
 
 .intro__wrapper {
-  @media (max-width: $tablet) {
-    text-align: center;
-  }
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  grid-template-columns: 1fr;
+  height: auto;
+  position: relative;
 
   @media (min-width: $tablet) {
+    padding-left: 82px;
     text-align: left;
+    justify-items: start;
+    min-height: 851px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 80px;
+    min-height: 553px;
   }
 }
 
 .intro__title {
-  @media (max-width: $tablet) {
-    color: $basic-white;
-  }
+  color: $basic-white;
+  margin-top: 27px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet) {
     color: $basic-black;
+    margin-top: 41px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 82px;
+    margin-bottom: 40px;
   }
 }
 
 .intro__slogan {
   @include text-title;
   text-transform: uppercase;
-
-  @media (max-width: $tablet) {
-    color: $basic-white;
-    font-size: 14px;
-    line-height: 14px;
-  }
+  color: $basic-white;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet) {
     color: $basic-black;
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 52px;
   }
 }
-//
-// .intro__picture {
-//
-//   @media (max-width: $tablet) {
-//   }
-//
-//   @media (min-width: $tablet) and (max-width: $desktop) {
-//   }
-//
-//   @media (min-width: $desktop) {
-//   }
-// }
 
-.button.intro__link {
-  @media (max-width: $tablet - 1px) {
-    font-size: 14px;
-    line-height: 18px;
+.intro__picture {
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet) {
+    justify-self: center;
+    grid-row: 4;
+    position: absolute;
+    z-index: -1;
+    top: -77px;
+    width: 709px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-row: 1;
+    top: 0;
+    left: 368px;
+    width: 552px;
+  }
+}
+
+.intro__link {
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 244px;
   }
 }
 //
@@ -69,23 +105,21 @@
   display: block;
   position: absolute;
   top: 0;
-  z-index: -1;
+  z-index: -2;
   background-repeat: no-repeat;
   background-color: $intro-green;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-position: center top;
+  height: 305px;
+  width: 100%;
+  left: center;
 
-  @media (max-width: $tablet) {
-    background-image: url("../img/index-background-mobile@1x.jpg");
-    background-position: center top;
-    height: 305px;
-    width: 100%;
-    left: center;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop - 1px) {
+  @media (min-width: $tablet) {
     display: none;
   }
 
   @media (min-width: $desktop) {
+    display: block;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-position: right top;
     right: 0;

@@ -3,13 +3,10 @@
 //
 .features__title {
   margin: 0;
+  margin-top: 27px;
+  margin-bottom: 38px;
 
-  @media (max-width: $tablet) {
-    margin-top: 27px;
-    margin-bottom: 38px;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) {
     margin-top: 45px;
     margin-bottom: 72px;
   }
@@ -24,40 +21,19 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-
-  @media (max-width: $tablet) {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
+  display: grid;
+  grid-row-gap: 20px;
 
   @media (min-width: $tablet) {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 58px;
+    grid-row-gap: 37px;
+  }
+
+  @media (min-width: 250px*4 + 50px*3) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0;
     justify-content: space-between;
-  }
-}
-
-.features__item {
-  display: flex;
-  position: relative;
-  min-height: 60px;
-  margin: 0;
-  flex-shrink: 0;
-  flex-grow: 0;
-
-  @media (max-width: $tablet) {
-    margin-bottom: 20px;
-  }
-
-  @media (min-width: $tablet) {
-    flex-direction: column;
-    width: 230px;
-    min-height: 280px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }
 
@@ -75,68 +51,108 @@
   }
 }
 
-.features__item--substance::before {
-  @include features__item--before;
-  background-image: url("../img/advantage-leaf@1x.svg");
-}
-
-.features__item--powder::before {
-  @include features__item--before;
-  background-image: url("../img/advantage-powder@1x.svg");
-}
-
-.features__item--meal::before {
-  @include features__item--before;
-  background-image: url("../img/advantage-dining@1x.svg");
-}
-
-.features__item--time::before {
-  @include features__item--before;
-  background-image: url("../img/advantage-clock@1x.svg");
-}
-
 @mixin features__item--after {
+  @include text-title;
   position: absolute;
   z-index: -1;
   right: 0;
-
-  @include text-title;
   font-size: 280px;
   line-height: 280px;
   color: $basic-grey;
+  display: none;
 
-  @media (max-width: $tablet - 1px) {
-    display: none;
+  @media (min-width: $tablet) {
+    display: inline-block;
   }
 }
 
-// вставлять нумерацию через css не правильно...
-.features__item--substance::after {
-  @include features__item--after;
-  content: "1";
-}
+.features__item {
+  display: flex;
+  position: relative;
+  min-height: 60px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 0;
+  margin-bottom: 20px;
 
-.features__item--powder::after {
-  @include features__item--after;
-  content: "2";
-}
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    flex-direction: column;
+    min-height: 280px;
+  }
 
-.features__item--meal::after {
-  @include features__item--after;
-  content: "3";
-}
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-.features__item--time::after {
-  @include features__item--after;
-  content: "4";
+  &--substance {
+    @media (min-width: $tablet) {
+      width: 230px;
+    }
+
+    &::before {
+      @include features__item--before;
+      background-image: url("../img/advantage-leaf@1x.svg");
+    }
+
+    &::after {
+      @include features__item--after;
+      content: "1";
+    }
+  }
+
+  &--powder {
+    @media (min-width: $tablet) {
+      width: 246px;
+    }
+
+    &::before {
+      @include features__item--before;
+      background-image: url("../img/advantage-powder@1x.svg");
+    }
+
+    &::after {
+      @include features__item--after;
+      content: "2";
+    }
+  }
+
+  &--meal {
+    @media (min-width: $tablet) {
+      width: 247px;
+    }
+
+    &::before {
+      @include features__item--before;
+      background-image: url("../img/advantage-dining@1x.svg");
+    }
+
+    &::after {
+      @include features__item--after;
+      content: "3";
+    }
+  }
+
+  &--time {
+    @media (min-width: $tablet) {
+      width: 249px;
+    }
+
+    &::before {
+      @include features__item--before;
+      background-image: url("../img/advantage-clock@1x.svg");
+    }
+
+    &::after {
+      @include features__item--after;
+      content: "4";
+    }
+  }
 }
 
 .features__description {
   margin: 0;
-
-  @media (max-width: $tablet) {
-    margin-left: 20px;
-  }
+  margin-left: 20px;
 
   @media (min-width: $tablet) {
     margin-left: 0;

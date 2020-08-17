@@ -1,10 +1,7 @@
 .additional-catalog {
   display: flex;
   flex-wrap: wrap;
-
-  @media (max-width: $desktop) {
-    flex-direction: column;
-  }
+  flex-direction: column;
 
   @media (min-width: $desktop) {
     flex-direction: row;
@@ -26,23 +23,23 @@
 
 .additional-catalog__item {
   border-top: 1px solid $grey-border;
+  box-sizing: border-box;
+  padding: 13px 0 19px;
 
   &:last-child {
     border-bottom: 1px solid $grey-border;
   }
 
-  @media (max-width: $tablet) {
-    padding: 13px 0 19px;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) {
     border-left: 1px solid $grey-border;
     border-right: 1px solid $grey-border;
     padding: 26px 37px 28px 38px;
   }
 
   @media (min-width: $desktop) {
-    padding: 15px 0 17px;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 16px;
   }
 }
 //
@@ -59,15 +56,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  margin: 0;
+  margin-top: 39px;
+  min-height: 289px;
+  text-align: center;
 
-  @media (max-width: $tablet) {
-    background-image: url("../img/gift-photo-mobile@1x.jpg");
-    margin-top: 39px;
-    min-height: 289px;
-    text-align: center;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) {
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     min-height: 200px;
     margin-top: 69px;
@@ -89,15 +84,12 @@
   content: url("../img/icon-gift.svg");
   display: block;
   height: 78px;
+  margin-top: 58px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 
-  @media (max-width: $tablet) {
-    margin-top: 58px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) {
     margin-top: 0;
     margin-left: 78px;
     margin-right: 265px;

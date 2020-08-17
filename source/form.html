@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Подбор программы</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="keywords" content="">
     <meta name="description" content=""> -->
   </head>
@@ -11,10 +12,10 @@
     <header class="page-header">
       <div class="page-header_wrapper">
         <a class="page-header__logo-link" href="index.html">
-          <img src="img/logo-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
+          <img class="page-header__logo-image" src="img/logo-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
         </a>
         <a class="page-header__title-link" href="index.html">
-          <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+          <img class="page-header__logo-image" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
         <button class="page-header__nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -42,24 +43,26 @@
     </header>
 
     <main class="page-main">
-      <section class="form container">
+      <section class="container page-main__form form">
         <h1 class="title form__title">Подбор программы</h1>
         <p class="subtitle form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
         <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__section form__section--about-cat">
+          <fieldset class="form__section">
             <legend class="visually-hidden">Информация о коте</legend>
-            <label class="form__input-label">
-              <span class="form__input-description">Имя:*</span>
-              <input id="name-field" class="form__input-field form__input-field--name" type="text" name="name" placeholder="Барсик" autocomplete="on" required>
-            </label>
-            <label class="form__input-label">
-              <span class="form__input-description">Вес (кг):*</span>
-              <input id="weight-field" class="form__input-field form__input-field--weight" type="number" name="weight" placeholder="7" autocomplete="on" required>
-            </label>
-            <label class="form__input-label">
-              <span class="form__input-description">Возраст (лет):</span>
-              <input id="age-field" class="form__input-field form__input-field--age" type="number" name="age" placeholder="7" autocomplete="on">
-            </label>
+            <div class="form__section-wrapper form__section-wrapper--about-cat">
+              <label class="form__input-label">
+                <span class="form__input-description">Имя:*</span>
+                <input id="name-field" class="form__input-field form__input-field--name" type="text" name="name" placeholder="Барсик" autocomplete="on" required>
+              </label>
+              <label class="form__input-label">
+                <span class="form__input-description">Вес (кг):*</span>
+                <input id="weight-field" class="form__input-field form__input-field--weight" type="number" name="weight" placeholder="7" autocomplete="on" required>
+              </label>
+              <label class="form__input-label">
+                <span class="form__input-description">Возраст (лет):</span>
+                <input id="age-field" class="form__input-field form__input-field--age" type="number" name="age" placeholder="7" autocomplete="on">
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="form__section form__section--program">
@@ -82,14 +85,16 @@
 
           <fieldset class="form__section form__section--contacts">
             <legend class="form__section-title">Контактные данные (владельца&nbsp;кота)</legend>
-            <label class="form__input-label">
-              <span class="form__input-description">E-mail:*</span>
-              <input id="email-field" class="form__input-field form__input-field--email" type="email" name="email" placeholder="kuklachev@gmail.com" autocomplete="on" required>
-            </label>
-            <label class="form__input-label">
-              <span class="form__input-description">Телефон:*</span>
-              <input id="phone-field" class="form__input-field form__input-field--tel" type="tel" name="phone" placeholder="8 (960) 900-60-90" autocomplete="on" required>
-            </label>
+            <div class="form__section-wrapper form__section-wrapper--contacts">
+              <label class="form__input-label">
+                <span class="form__input-description">E-mail:*</span>
+                <input id="email-field" class="form__input-field form__input-field--email" type="email" name="email" placeholder="kuklachev@gmail.com" autocomplete="on" required>
+              </label>
+              <label class="form__input-label">
+                <span class="form__input-description">Телефон:*</span>
+                <input id="phone-field" class="form__input-field form__input-field--tel" type="tel" name="phone" placeholder="8 (960) 900-60-90" autocomplete="on" required>
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="form__section form__section--comment">
@@ -131,10 +136,12 @@
 
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
-          <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8</address>
-          <address class="contacts__address contacts__address--city">Санкт-Петербург</address>
+        <div class="container contacts__wrapper">
+          <div class="contacts__content">
+            <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+            <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8</address>
+            <address class="contacts__address">Санкт-Петербург</address>
+          </div>
         </div>
         <div id="map" class="contacts__map"></div>
       </div>

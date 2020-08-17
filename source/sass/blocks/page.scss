@@ -19,17 +19,13 @@ img {
 }
 
 .page {
+  @include text-main;
   height: 100%;
   color: $grey-text;
   background-color: $basic-white;
-
-  @include text-main;
-
-  @media (max-width: $tablet) {
-    font-size: 14px;
-    line-height: 18px;
-    min-width: $mobile;
-  }
+  font-size: 14px;
+  line-height: 18px;
+  min-width: $mobile;
 
   @media (min-width: $tablet) {
     font-size: 16px;

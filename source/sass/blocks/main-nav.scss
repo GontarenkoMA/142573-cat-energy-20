@@ -7,26 +7,15 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
-
-  @media (max-width: $tablet) {
-    flex-direction: column;
-  }
+  flex-direction: column;
+  min-width: 320px;
 
   @media (min-width: $tablet) {
+    width: 438px;
     flex-direction: row;
   }
 
-  @media (max-width: $tablet) {
-    min-width: 320px;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
-    margin-left: auto;
-    width: 438px;
-  }
-
   @media (min-width: $desktop) {
-    margin-left: auto;
     width: 483px;
   }
 }
@@ -34,9 +23,10 @@
 .main-nav__item {
   display: flex;
   justify-content: center;
+  border-top: 1px solid $nav-border;
 
-  @media (max-width: $tablet - 1px) {
-    border-top: 1px solid $nav-border;
+  @media (min-width: $tablet) {
+    border: none;
   }
 }
 
@@ -45,19 +35,18 @@
   text-transform: uppercase;
   color: $basic-black;
   text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 22px 20px 24px;
+  margin: 0 20px;
 
-  @media (max-width: $tablet - 1px) {
-    @include container;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 500;
-    padding: 22px 20px 24px;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
   }
 
   @media (min-width: $desktop) {
@@ -74,30 +63,31 @@
   &:active {
     opacity: $alpha30;
   }
-}
 
-.main-nav__link--index {
-  @media (min-width: $desktop) {
-    color: $basic-white;
-  }
-}
-
-.main-nav__link--active {
-  cursor: default;
-
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 1;
+  &--index {
+    @media (min-width: $desktop) {
+      color: $basic-white;
+    }
   }
 
-  @media (min-width: $tablet) {
-    border-bottom: 2px solid $basic-green;
-  }
-}
+  &--active {
+    cursor: default;
 
-.main-nav__link--active.main-nav__link--index {
-  @media (min-width: $desktop) {
-    border-bottom-color: $basic-white;
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+
+    @media (min-width: $tablet) {
+      border-bottom: 2px solid $basic-green;
+      padding-bottom: 10px;
+    }
+
+    &.main-nav__link--index {
+      @media (min-width: $desktop) {
+        border-bottom-color: $basic-white;
+      }
+    }
   }
 }

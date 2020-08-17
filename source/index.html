@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="keywords" content="">
     <meta name="description" content=""> -->
   </head>
@@ -13,10 +14,10 @@
 
       <div class="page-header_wrapper">
         <a class="page-header__logo-link">
-          <img src="img/logo-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
+          <img class="page-header__logo-image" src="img/logo-icon-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
         </a>
         <a class="page-header__title-link">
-          <img src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+          <img class="page-header__logo-image" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
         <button class="page-header__nav-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -57,7 +58,7 @@
         <div class="intro__background"></div>
       </section>
 
-      <section class="programs container">
+      <section class="container programs page-main__programs">
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="programs__list">
           <li class="programs__item">
@@ -77,7 +78,7 @@
         </ul>
       </section>
 
-      <section class="features container">
+      <section class="container features page-main__features">
         <h2 class="title features__title">Как это работает</h2>
         <ul class="features__list">
           <li class="features__item features__item--substance">
@@ -96,7 +97,7 @@
       </section>
 
       <section class="example">
-        <div class="example__wrapper container">
+        <div class="container example__wrapper">
           <h2 class="title example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <dl class="example__data-list">
@@ -111,7 +112,7 @@
           </dl>
           <div class="example__sum">
             <p class="example__sum-description">Затраты на питание:</p>
-            <p class="example__sum-number">15 000 руб.</p>
+            <p class="example__sum-number">&nbsp;15 000 руб.</p>
           </div>
           <div class="example__widget">
             <div class="example__pictures-wrapper">
@@ -122,12 +123,14 @@
                 <img src="https://via.placeholder.com/252x240" width="252" height="240" alt="Кот После: стройный кот">
               </div>
             </div>
-            <button class="example__button example__button--before">Было</button>
-            <div class="example__range-wrapper">
-              <div class="example__range-line"></div>
-              <div class="example__range-control"></div>
+            <div class="example__controls">
+              <button class="example__button example__button--before">Было</button>
+              <div class="example__range-wrapper">
+                <div class="example__range-line"></div>
+                <div class="example__range-control"></div>
+              </div>
+              <button class="example__button example__button--after">Стало</button>
             </div>
-            <button class="example__button example__button--after">Стало</button>
           </div>
         </div>
         <div class="example__background"></div>
@@ -136,12 +139,14 @@
 
     <footer class="page-footer">
       <div class="page-footer__contacts contacts contacts--index">
-          <div class="contacts__wrapper contacts__wrapper--index">
+        <div class="container contacts__wrapper">
+          <div class="contacts__content contacts__content--index">
             <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
             <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8</address>
-            <address class="contacts__address contacts__address--city">Санкт-Петербург</address>
+            <address class="contacts__address">Санкт-Петербург</address>
           </div>
-          <div id="map" class="contacts__map"></div>
+        </div>
+        <div id="map" class="contacts__map"></div>
       </div>
       <div class="container page-footer__wrapper">
         <a class="page-footer__title-link page-footer__title-link--index">
