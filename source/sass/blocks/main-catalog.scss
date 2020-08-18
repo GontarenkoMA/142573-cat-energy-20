@@ -48,12 +48,6 @@
     }
   }
 
-  @media (min-width: (324px + 60px)*3 + 10px*2) {
-    &:nth-child(-n+3) {
-      margin-top: 0;
-    }
-  }
-
   @media (min-width: $desktop) {
     min-height: 511px;
 

@@ -43,11 +43,11 @@
     </header>
 
     <main class="page-main">
-      <section class="container page-main__form form">
-        <h1 class="title form__title">Подбор программы</h1>
-        <p class="subtitle form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+      <section class="page-main__form form">
+        <h1 class="container title form__title">Подбор программы</h1>
+        <p class="container subtitle form__subtitle">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
         <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__section">
+          <fieldset class="container form__section">
             <legend class="visually-hidden">Информация о коте</legend>
             <div class="form__section-wrapper form__section-wrapper--about-cat">
               <label class="form__input-label">
@@ -67,7 +67,7 @@
 
           <fieldset class="form__section form__section--program">
             <legend class="visually-hidden">Программа питания</legend>
-            <ul class="form__program-list">
+            <ul class="container form__program-list">
               <li class="form__program-item">
                 <input id="program-slim" class="visually-hidden" type="radio" name="program" value="slim" checked>
                 <label class="form__input-label form__input-label--radio" for="program-slim">Похудение</label>
@@ -83,7 +83,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__section form__section--contacts">
+          <fieldset class="container form__section form__section--contacts">
             <legend class="form__section-title">Контактные данные (владельца&nbsp;кота)</legend>
             <div class="form__section-wrapper form__section-wrapper--contacts">
               <label class="form__input-label">
@@ -97,7 +97,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="form__section form__section--comment">
+          <fieldset class="container form__section form__section--comment">
             <legend class="form__section-title">Комментарий</legend>
             <label>
               <span class="visually-hidden">Комментарий</span>
@@ -105,7 +105,7 @@
             </label>
           </fieldset>
 
-          <fieldset class="form__section form__section--additional-products">
+          <fieldset class="container form__section form__section--additional-products">
             <legend class="form__section-title">Дополнительно</legend>
             <ul class="form__additional-products-list">
               <li class="form__additional-products-item">
@@ -126,7 +126,7 @@
               </li>
             </ul>
           </fieldset>
-          <div class="form__footer">
+          <div class="container form__footer">
             <input class="button form__submit-button" type="submit" value="Отправить заявку">
             <small class="form__legend">* — Обязательные поля</small>
           </div>
