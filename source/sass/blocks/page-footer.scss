@@ -44,12 +44,12 @@
 
   &--index {
     cursor: default;
+  }
 
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: 1;
-    }
+  &--index:hover,
+  &--index:focus,
+  &--index:active {
+    opacity: 1;
   }
 }
 
@@ -77,19 +77,15 @@
     margin: 0;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    & .page-footer__copyright-logo {
-      fill: $basic-green;
-    }
+  &:hover .page-footer__copyright-logo,
+  &:focus .page-footer__copyright-logo,
+  &:active .page-footer__copyright-logo {
+    fill: $basic-green;
   }
 
-  &:active {
-    & .page-footer__copyright-logo,
-    & .page-footer__copyright-text {
-      opacity: $alpha30;
-    }
+  &:active .page-footer__copyright-logo,
+  &:active .page-footer__copyright-text {
+    opacity: $alpha30;
   }
 }
 

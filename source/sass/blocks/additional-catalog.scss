@@ -60,21 +60,25 @@
     padding: 15px 0 16px;
   }
 }
-//
-// .additional-catalog__product {
-// }
+
+.additional-catalog__product {
+  @media (min-width: $desktop) {
+    min-width: 896px;
+  }
+}
 
 .additional-catalog__special-offer {
   color: $basic-white;
   background-color: $intro-green;
   font-size: 16px;
   line-height: 20px;
-  background-repeat: no-repeat;
-  background-position: center top;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin: 0;
   margin-top: 4px;
   min-height: 289px;
@@ -94,30 +98,22 @@
     min-width: 245px;
     text-align: center;
   }
-}
 
-.additional-catalog__special-offer::before {
-  content: url("../img/icon-gift.svg");
-  display: block;
-  height: 78px;
-  margin-top: 58px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-
-  @media (min-width: $tablet) {
-    margin-top: 0;
-    margin-left: 78px;
-    margin-right: 265px;
-    margin-bottom: 5px;
-    width: 80px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-top: 56px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
+  &::before {
+    content: url("../img/icon-gift.svg");
+    display: block;
+    height: 78px;
+    margin-top: 58px;
     width: 100%;
+
+    @media (min-width: $tablet) {
+      margin: 0 265px 5px 78px;
+      width: 80px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 56px auto 5px;
+      width: 100%;
+    }
   }
 }

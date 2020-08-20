@@ -1,11 +1,14 @@
-.page-header {
+// .page-header {
+//
+// }
+//
+.page-header__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   border-bottom: 1px solid $nav-border;
   padding: 0;
 
   @media (min-width: $tablet) {
-    @include container;
     grid-template-columns: auto 1fr;
     border: none;
     padding-top: 25px;
@@ -18,21 +21,17 @@
   }
 }
 
-.page-header_wrapper {
-  @include container;
+.page-header__top-wrapper {
+  padding: 0;
+  margin: 0;
   display: grid;
   min-height: 65px;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: auto;
-  margin-bottom: auto;
+  grid-template-columns: min-content min-content min-content;
+  align-items: center;
+  justify-content: space-between;
 
   @media (min-width: $tablet) {
     grid-template-columns: auto 1fr;
-    padding: 0;
-    margin: 0;
-    min-width: auto;
-    width: auto;
-    min-height: auto;
   }
 }
 
@@ -55,6 +54,8 @@
   justify-content: flex-start;
   align-content: center;
   padding-bottom: 6px;
+  width: 34px;
+  height: 38px;
 
   @media (min-width: $tablet) {
     width: 174px;
@@ -69,10 +70,13 @@
 }
 
 .page-header__title-link {
+  justify-self: center;
   text-align: center;
   display: flex;
   justify-content: center;
   align-content: center;
+  width: 101px;
+  height: 18px;
 
   @media (min-width: $tablet) {
     display: none;
@@ -88,7 +92,10 @@
 }
 
 .page-header__nav-toggle {
+  min-width: 24px;
+  min-height: 18px;
   margin: 0;
+  margin-left: 9px;
   padding: 0;
   background-color: transparent;
   cursor: pointer;

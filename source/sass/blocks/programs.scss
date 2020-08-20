@@ -179,12 +179,10 @@
     line-height: 20px;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    &::after {
-      content: url("../img/icon-right-arrow-verylong.svg");
-    }
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
   }
 
   &:active {

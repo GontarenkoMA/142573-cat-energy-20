@@ -29,15 +29,15 @@
   &--modified {
     color: $grey-text;
     background-color: $basic-grey;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: $grey-btn-action;
-    }
+  &--modified:hover,
+  &--modified:focus {
+    background-color: $grey-btn-action;
+  }
 
-    &:active {
-      color: rgba($grey-text, $alpha30);
-      background-color: $grey-btn-action;
-    }
+  &--modified:active {
+    color: rgba($grey-text, $alpha30);
+    background-color: $grey-btn-action;
   }
 }

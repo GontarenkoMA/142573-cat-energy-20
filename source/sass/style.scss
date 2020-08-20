@@ -4,6 +4,27 @@
 @import "global/mixins.scss";
 @import "global/container.scss";
 
+//global here
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 // blocks
 @import "blocks/page.scss";
 @import "blocks/title.scss";

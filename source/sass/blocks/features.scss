@@ -89,64 +89,64 @@
     @media (min-width: $tablet) {
       width: 230px;
     }
+  }
 
-    &::before {
-      @include features__item--before;
-      background-image: url("../img/advantage-leaf@1x.svg");
-    }
+  &--substance::before {
+    @include features__item--before;
+    background-image: url("../img/advantage-leaf@1x.svg");
+  }
 
-    &::after {
-      @include features__item--after;
-      content: "1";
-    }
+  &--substance::after {
+    @include features__item--after;
+    content: "1";
   }
 
   &--powder {
     @media (min-width: $tablet) {
       width: 246px;
     }
+  }
 
-    &::before {
-      @include features__item--before;
-      background-image: url("../img/advantage-powder@1x.svg");
-    }
+  &--powder::before {
+    @include features__item--before;
+    background-image: url("../img/advantage-powder@1x.svg");
+  }
 
-    &::after {
-      @include features__item--after;
-      content: "2";
-    }
+  &--powder::after {
+    @include features__item--after;
+    content: "2";
   }
 
   &--meal {
     @media (min-width: $tablet) {
       width: 247px;
     }
+  }
 
-    &::before {
-      @include features__item--before;
-      background-image: url("../img/advantage-dining@1x.svg");
-    }
+  &--meal::before {
+    @include features__item--before;
+    background-image: url("../img/advantage-dining@1x.svg");
+  }
 
-    &::after {
-      @include features__item--after;
-      content: "3";
-    }
+  &--meal::after {
+    @include features__item--after;
+    content: "3";
   }
 
   &--time {
     @media (min-width: $tablet) {
       width: 249px;
     }
+  }
 
-    &::before {
-      @include features__item--before;
-      background-image: url("../img/advantage-clock@1x.svg");
-    }
+  &--time::before {
+    @include features__item--before;
+    background-image: url("../img/advantage-clock@1x.svg");
+  }
 
-    &::after {
-      @include features__item--after;
-      content: "4";
-    }
+  &--time::after {
+    @include features__item--after;
+    content: "4";
   }
 }
 
