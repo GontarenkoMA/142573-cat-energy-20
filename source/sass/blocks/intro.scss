@@ -81,7 +81,7 @@
   @media (min-width: $desktop) {
     grid-row: 1;
     top: 0;
-    left: 368px;
+    left: 448px;
     width: 552px;
   }
 }
@@ -109,7 +109,8 @@
   background-repeat: no-repeat;
   background-color: $intro-green;
   background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: center top;
+  background-size: cover;
+  background-position: center;
   height: 305px;
   width: 100%;
   left: center;
@@ -121,6 +122,7 @@
   @media (min-width: $desktop) {
     display: block;
     background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: contain;
     background-position: right top;
     right: 0;
     height: 696px;

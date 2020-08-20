@@ -73,21 +73,21 @@
   &--active {
     cursor: default;
 
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: 1;
-    }
-
     @media (min-width: $tablet) {
       border-bottom: 2px solid $basic-green;
       padding-bottom: 10px;
     }
+  }
 
-    &.main-nav__link--index {
-      @media (min-width: $desktop) {
-        border-bottom-color: $basic-white;
-      }
+  &--active.main-nav__link--index {
+    @media (min-width: $desktop) {
+      border-bottom-color: $basic-white;
     }
+  }
+
+  &--active:hover,
+  &--active:focus,
+  &--active:active {
+    opacity: 1;
   }
 }

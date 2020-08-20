@@ -20,28 +20,36 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 66px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
   }
 }
 
 .form__form {
   display: grid;
-  //
-  // @media (min-width: $tablet) {
-  // }
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    padding: 0 40px;
+  }
 
   @media (min-width: $desktop) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 80px;
+    padding: 0;
   }
 }
 
 .form__section {
   border: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   &--program {
-    margin: 0;
     border-top: 1px solid $grey-border-input;
     border-bottom: 1px solid $grey-border-input;
     margin-top: 27px;
@@ -135,11 +143,10 @@
   }
 }
 
-.form__program-list,
-.form__additional-products-list {
+.form__program-list {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .form__program-item {
@@ -155,17 +162,23 @@
 }
 
 .form__additional-products-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 12px;
 
   @media (min-width: $tablet) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, 245px);
     grid-row-gap: 32px;
+    grid-column-gap: 99px;
+    justify-content: start;
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 61px;
+    justify-content: space-between;
   }
 }
 //
@@ -210,44 +223,44 @@
       padding-bottom: 5px;
       padding-left: 60px;
     }
+  }
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: 1;
-      border-radius: 50%;
-      border: 1px solid $grey-border;
-      left: 0;
-      top: 0;
-      width: 30px;
-      height: 30px;
+  &--radio::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px solid $grey-border;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
 
-      @media (min-width: $tablet) {
-        width: 40px;
-        height: 40px;
-      }
+    @media (min-width: $tablet) {
+      width: 40px;
+      height: 40px;
     }
+  }
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: 2;
-      border-radius: 50%;
-      background-color: $basic-green;
-      opacity: 0;
-      width: 13.5px;
-      height: 13.5px;
-      left: 9.25px;
-      top: 9.25px;
+  &--radio::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: $basic-green;
+    opacity: 0;
+    width: 13.5px;
+    height: 13.5px;
+    left: 9.25px;
+    top: 9.25px;
 
-      @media (min-width: $tablet) {
-        width: 18px;
-        height: 18px;
-        left: 12px;
-        top: 12px;
-      }
+    @media (min-width: $tablet) {
+      width: 18px;
+      height: 18px;
+      left: 12px;
+      top: 12px;
     }
   }
 
@@ -268,39 +281,39 @@
       padding-bottom: 5px;
       padding-left: 60px;
     }
+  }
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: 1;
-      border: 1px solid $grey-border;
-      left: 0;
-      top: 0;
-      width: 30px;
-      height: 30px;
+  &--checkbox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid $grey-border;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
 
-      @media (min-width: $tablet) {
-        width: 40px;
-        height: 40px;
-      }
+    @media (min-width: $tablet) {
+      width: 40px;
+      height: 40px;
     }
+  }
 
-    &::after {
-      content: url("../img/icon-tick.svg");
-      display: block;
-      position: absolute;
-      z-index: 2;
-      opacity: 0;
-      width: 26px;
-      height: 26px;
-      left: 3px;
-      top: 3px;
+  &--checkbox::after {
+    content: url("../img/icon-tick.svg");
+    display: block;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    width: 26px;
+    height: 26px;
+    left: 3px;
+    top: 3px;
 
-      @media (min-width: $tablet) {
-        left: 7px;
-        top: 7px;
-      }
+    @media (min-width: $tablet) {
+      left: 7px;
+      top: 7px;
     }
   }
 }
@@ -313,32 +326,24 @@
 }
 
 input {
-  &:focus,
-  &:hover {
-    & + .form__input-label--radio,
-    & + .form__input-label--checkbox {
-      &::before {
-        border-color: $grey-border-action;
-      }
-    }
+  &:focus + .form__input-label--radio::before,
+  &:focus + .form__input-label--checkbox::before,
+  &:hover + .form__input-label--radio::before,
+  &:hover + .form__input-label--checkbox::before {
+    border-color: $grey-border-action;
   }
 
-  &:active,
-  &:disabled {
-    & + .form__input-label--radio,
-    & + .form__input-label--checkbox {
-      opacity: $alpha30;
-      cursor: default;
-    }
+  &:active + .form__input-label--radio,
+  &:active + .form__input-label--checkbox,
+  &:disabled + .form__input-label--radio,
+  &:disabled + .form__input-label--checkbox {
+    opacity: $alpha30;
+    cursor: default;
   }
 
-  &:checked {
-    & + .form__input-label--radio,
-    & + .form__input-label--checkbox {
-      &::after {
-        opacity: 1;
-      }
-    }
+  &:checked + .form__input-label--radio::after,
+  &:checked + .form__input-label--checkbox::after {
+    opacity: 1;
   }
 }
 
@@ -411,22 +416,21 @@ input {
     line-height: 18px;
     padding: 12px 11px 12px 14px;
 
-    &:active,
-    &:focus {
-      padding: 11px 10px 11px 13px;
-    }
-
     @media (min-width: $tablet) {
       min-height: 174px;
       font-size: 20px;
       line-height: 30px;
       margin-top: 19px;
       padding: 9px 18px;
+    }
+  }
 
-      &:active,
-      &:focus {
-        padding: 8px 17px;
-      }
+  &--comment:active,
+  &--comment:focus {
+    padding: 11px 10px 11px 13px;
+
+    @media (min-width: $tablet) {
+      padding: 8px 17px;
     }
   }
   //
@@ -451,6 +455,8 @@ input {
 }
 
 .form__footer {
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 34px;

@@ -16,17 +16,13 @@
   margin: auto;
   display: flex;
 
-  &:hover,
-  &:focus,
-  &:active {
-    & .socials__logo {
-      fill: $basic-green;
-    }
+  &:hover .socials__logo,
+  &:focus .socials__logo,
+  &:active .socials__logo {
+    fill: $basic-green;
   }
 
-  &:active {
-    & .socials__logo {
-      opacity: $alpha30;
-    }
+  &:active .socials__logo {
+    opacity: $alpha30;
   }
 }

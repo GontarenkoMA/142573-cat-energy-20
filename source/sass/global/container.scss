@@ -1,21 +1,46 @@
 @mixin container {
   box-sizing: border-box;
-  padding: 0;
-  min-width: $mobile - 20px*2;
-  margin: 0 20px;
+  width: 100%;
+  margin: auto;
+  min-width: $mobile;
+  padding: 0 20px;
 
   @media (min-width: $tablet) {
-    min-width: $tablet - 30px*2;
-    max-width: $desktop - 110px*2;
-    margin: 0 30px;
+    min-width: $tablet;
+    max-width: $desktop;
+    padding: 0 30px;
   }
 
-  @media (min-width: $desktop - 110px*2 + 30px*2) {
-    width: $desktop - 110px*2;
-    margin: 0 auto;
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 110px;
   }
 }
 
+@mixin anticontainer {
+  box-sizing: border-box;
+  padding: 0;
+  min-width: unset;
+  max-width: unset;
+  width: unset;
+}
+
+
 .container {
   @include container;
+
+  &--mobile {
+    @include container;
+
+    @media (min-width: $tablet) {
+      @include anticontainer;
+      display: contents;
+    }
+  }
+
+  &--tablet-desktop {
+    @media (min-width: $tablet) {
+      @include container;
+    }
+  }
 }
