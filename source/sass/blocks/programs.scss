@@ -21,15 +21,15 @@
 
 .programs__item {
   background-color: $basic-grey;
-  padding: 21px 20px 18px;
+  padding: 30px 20px 18px;
 
   @media (min-width: $tablet) {
-    padding: 77px 62px 53px 52px;
+    padding: 77px 62px 56px 52px;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 0;
-    padding: 77px 52px 55px;
+    padding: 77px 52px 57px;
   }
 
   &:last-child {
@@ -69,8 +69,8 @@
     background-image: url("../img/icon-cat-slim.svg");
     height: 53px;
     width: 50px;
-    top: -3px;
-    left: 0;
+    top: -9px;
+    left: 2px;
 
     @media (min-width: $tablet) {
       height: 211px;
@@ -103,22 +103,22 @@
     background-image: url("../img/icon-cat-pro.svg");
     height: 50px;
     width: 67px;
-    top: 0;
-    left: -9px;
+    top: -5px;
+    left: -7px;
 
     @media (min-width: $tablet) {
       height: 200px;
       width: 268px;
       top: 14px;
       left: auto;
-      right: -32px;
+      right: -34px;
     }
 
     @media (min-width: $desktop) {
       height: 100px;
       width: 134px;
       top: -30px;
-      left: -19px;
+      left: -18px;
     }
   }
 }
@@ -155,12 +155,14 @@
 
   @media (min-width: $tablet) {
     border: none;
+    padding-bottom: 0;
   }
 }
 
 .programs__link {
   @include text-title;
   display: inline-block;
+  position: relative;
   margin: 0;
   text-transform: uppercase;
   font-size: 16px;
@@ -168,13 +170,13 @@
   margin-top: 19px;
 
   @media (min-width: $tablet) {
-    margin-top: 51px;
+    margin-top: 57px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 27px;
+    margin-top: 33px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -191,13 +193,16 @@
 
   &::after {
     content: url("../img/icon-right-arrow-long.svg");
+    position: absolute;
     display: inline-block;
     height: 10px;
     width: 32px;
-    margin-left: 17px;
+    margin-left: 16px;
+    top: -1px;
 
     @media (min-width: $tablet) {
       margin-left: 25px;
+      top: -3px;
     }
 
     @media (min-width: $desktop) {

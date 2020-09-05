@@ -26,10 +26,10 @@
 .main-catalog__item {
   display: flex;
   box-sizing: border-box;
-  min-height: 210px;
+  min-height: 209px;
   width: 100%;
   border-top: 1px solid $grey-btn-action;
-  padding: 19px 0 25px;
+  padding: 19px 0 24px;
 
   @media (min-width: $tablet) {
     min-height: 511px;
@@ -75,13 +75,13 @@
   @media (min-width: $tablet) {
     border: 2px solid $basic-grey;
     height: 430px;
-    padding: 50px 37px 38px 38px;
+    padding: 50px 37px 37px 38px;
     margin-top: auto;
   }
 
   @media (min-width: $desktop) {
     height: 431px;
-    padding: 49px 37px 38px;
+    padding: 50px 37px 38px;
   }
 }
 
@@ -91,11 +91,13 @@
   width: 30px;
   height: 30px;
   background-image: url("../img/icon-plus-mobile.svg");
+  margin-top: 7px;
 
   @media (min-width: $tablet) {
     width: 60px;
     height: 60px;
     background-image: url("../img/icon-plus.svg");
+    margin-top: 0;
   }
 }
 
@@ -112,8 +114,12 @@
     font-size: 20px;
     line-height: 22px;
     max-width: 170px;
-    margin-top: 49px;
+    margin-top: 50px;
     margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 49px;
   }
 }
 

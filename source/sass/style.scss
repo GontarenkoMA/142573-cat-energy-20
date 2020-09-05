@@ -1,4 +1,5 @@
 // global
+@import "global/normalize.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
@@ -28,6 +29,7 @@ img {
 // blocks
 @import "blocks/page.scss";
 @import "blocks/title.scss";
+@import "blocks/subtitle.scss";
 @import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";

@@ -11,12 +11,12 @@
   min-width: 320px;
 
   @media (min-width: $tablet) {
-    width: 438px;
+    width: 440px;
     flex-direction: row;
   }
 
   @media (min-width: $desktop) {
-    width: 483px;
+    width: 479px;
   }
 }
 
@@ -36,9 +36,9 @@
   color: $basic-black;
   text-align: center;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 24px;
   font-weight: 500;
-  padding: 22px 20px 24px;
+  padding: 21px 20px 20px;
   margin: 0 20px;
 
   @media (min-width: $tablet) {
@@ -75,7 +75,7 @@
 
     @media (min-width: $tablet) {
       border-bottom: 2px solid $basic-green;
-      padding-bottom: 10px;
+      padding-bottom: 8px;
     }
   }
 
