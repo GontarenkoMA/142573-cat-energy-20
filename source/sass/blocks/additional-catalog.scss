@@ -1,10 +1,10 @@
 .additional-catalog {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 35px;
+  grid-row-gap: 14px;
 
   @media (min-width: $tablet) {
-    grid-row-gap: 69px;
+    grid-row-gap: 40px;
   }
 
   @media (min-width: $desktop) {
@@ -13,22 +13,53 @@
   }
 }
 
-.additional-catalog__title {
-  font-size: 24px;
-  line-height: 24px;
+.additional-catalog__title-wrapper {
   width: 100%;
   margin: 0;
-  margin-top: 28px;
+  margin-top: 7px;
 
   @media (min-width: $tablet) {
     grid-row-gap: 69px;
-    margin-top: 68px;
+    margin-top: 38px;
     margin-bottom: 11px;
   }
 
   @media (min-width: $desktop) {
     grid-column: 1 / span 2;
-    margin-top: 75px;
+    margin-top: 45px;
+  }
+}
+
+.additional-catalog__title {
+  @media (min-width: $tablet) {
+    margin-left: 38px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+  }
+
+  &::before {
+    @media (min-width: $tablet) {
+      width: calc(100% + 40px + 35px);
+      left: -38px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 22px;
+      left: -40px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet) {
+      transform: translateX(-68px);
+    }
+
+    @media (min-width: $desktop) {
+      top: 23px;
+      transform: translateX(calc(calc(calc(100vw - 1220px) / 2) * -1));
+    }
   }
 }
 
@@ -42,7 +73,7 @@
 .additional-catalog__item {
   border-top: 1px solid $grey-border;
   box-sizing: border-box;
-  padding: 13px 0 19px;
+  padding: 12px 0 18px;
 
   &:last-child {
     border-bottom: 1px solid $grey-border;
@@ -51,13 +82,13 @@
   @media (min-width: $tablet) {
     border-left: 1px solid $grey-border;
     border-right: 1px solid $grey-border;
-    padding: 26px 37px 28px 38px;
+    padding: 26px 37px 27px 37px;
   }
 
   @media (min-width: $desktop) {
     border-left: none;
     border-right: none;
-    padding: 15px 0 16px;
+    padding: 16px 0 16px;
   }
 }
 
@@ -80,16 +111,19 @@
   background-position: center;
   background-size: cover;
   margin: 0;
-  margin-top: 4px;
+  margin-top: 24px;
   min-height: 289px;
   text-align: center;
 
   @media (min-width: $tablet) {
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+    box-sizing: border-box;
     min-height: 200px;
     text-align: left;
     align-items: center;
-    margin-top: 0;
+    margin-top: 28px;
+    padding-top: 2px;
+    padding-right: 45px;
   }
 
   @media (min-width: $desktop) {
@@ -97,6 +131,9 @@
     min-height: 289px;
     min-width: 245px;
     text-align: center;
+    align-content: flex-start;
+    padding-right: 0;
+    margin: 0;
   }
 
   &::before {
@@ -104,15 +141,16 @@
     display: block;
     height: 78px;
     margin-top: 58px;
+    margin-bottom: 10px;
     width: 100%;
 
     @media (min-width: $tablet) {
-      margin: 0 265px 5px 78px;
+      margin: 0 265px 5px 0;
       width: 80px;
     }
 
     @media (min-width: $desktop) {
-      margin: 56px auto 5px;
+      margin: 54px auto 53px;
       width: 100%;
     }
   }

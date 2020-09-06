@@ -8,12 +8,12 @@
 
   @media (min-width: $tablet) {
     margin-top: 45px;
-    margin-bottom: 72px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 71px;
-    margin-bottom: 72px;
+    margin-top: 72px;
+    margin-bottom: 32px;
   }
 }
 
@@ -32,7 +32,7 @@
 
   @media (min-width: 250px*4 + 50px*3) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 0;
+    grid-column-gap: 79px;
     justify-content: space-between;
   }
 }
@@ -48,6 +48,8 @@
 
   @media (min-width: $tablet) {
     margin-top: 40px;
+    height: 80px;
+    width: 80px;
   }
 }
 
@@ -73,7 +75,6 @@
   flex-shrink: 0;
   flex-grow: 0;
   margin: 0;
-  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
@@ -89,6 +90,10 @@
     @media (min-width: $tablet) {
       width: 230px;
     }
+
+    @media (min-width: $desktop) {
+      width: 246px;
+    }
   }
 
   &--substance::before {
@@ -99,6 +104,10 @@
   &--substance::after {
     @include features__item--after;
     content: "1";
+
+    @media (min-width: $desktop) {
+      right: 16px;
+    }
   }
 
   &--powder {
@@ -121,6 +130,10 @@
     @media (min-width: $tablet) {
       width: 247px;
     }
+
+    @media (min-width: $desktop) {
+      width: 246px;
+    }
   }
 
   &--meal::before {
@@ -137,6 +150,10 @@
     @media (min-width: $tablet) {
       width: 249px;
     }
+
+    @media (min-width: $desktop) {
+      width: 246px;
+    }
   }
 
   &--time::before {
@@ -147,12 +164,14 @@
   &--time::after {
     @include features__item--after;
     content: "4";
+    right: -2px;
   }
 }
 
 .features__description {
   margin: 0;
   margin-left: 20px;
+  margin-top: 2px;
 
   @media (min-width: $tablet) {
     margin-left: 0;

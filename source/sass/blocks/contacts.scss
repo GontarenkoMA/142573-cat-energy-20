@@ -17,9 +17,10 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   margin: 0;
-  padding: 28px 0 22px;
+  padding: 27px 0 22px;
   min-height: 114px;
   justify-content: start;
+  z-index: 2;
 
   @media (min-width: $tablet) {
     min-height: 201px;
@@ -28,13 +29,13 @@
   }
 
   @media (min-width: $desktop) {
-    grid-column-gap: 90px;
+    grid-column-gap: 82px;
     background-color: $basic-white;
     box-sizing: border-box;
     min-width: 570px;
     width: 570px;
     min-height: 201px;
-    padding: 62px 76px 60px;
+    padding: 63px 76px 60px;
     position: absolute;
     top: 95px;
     left: 0;
@@ -53,19 +54,16 @@
   grid-row: 1/ span 2;
   margin: 0;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 21px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
-  }
-
-  @media (min-width: $tablet) {
     line-height: 26px;
   }
 
   @media (min-width: $desktop) {
     width: 160px;
-    margin-top: 4px;
+    margin-top: 3px;
     line-height: 25px;
   }
 }
@@ -74,7 +72,7 @@
   @include text-main;
   font-style: normal;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 21px;
 
   @media (min-width: $tablet) {
     font-size: 16px;
@@ -94,5 +92,44 @@
 
   @media (min-width: $tablet) {
     height: 400px;
+  }
+
+  &--nojs {
+    background-image: url("../img/bg-map-mobile@1x.png");
+    background-color: $basic-grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    @media (min-width: $tablet) {
+      background-image: url("../img/bg-map-tablet@1x.png");
+    }
+
+    @media (min-width: $desktop) {
+      background-image: url("../img/bg-map-desktop@1x.png");
+      background-size: contain;
+    }
+    //
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   display: block;
+    //   background-image: url("../img/map-pin.png");
+    //   background-color: transparent;
+    //   background-repeat: no-repeat;
+    //   background-size: contain;
+    //   background-position: center;
+    //   width: 61px;
+    //   height: 60px;
+    //   top: calc(100vw - 57vw);
+    //   left: calc(50vw - 31px);
+    //
+    //   @media (min-width: $tablet) {
+    //   }
+    //
+    //   @media (min-width: $desktop) {
+    //   }
+    // }
   }
 }

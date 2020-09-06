@@ -15,17 +15,19 @@
 }
 
 .additional-product__name {
+  @include text-title;
   padding: 0;
   margin: 0;
-
-  @include text-title;
+  margin-left: 1px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop) {
@@ -37,13 +39,17 @@
   padding: 0;
   margin: 0;
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   min-width: 100%;
 
   @media (min-width: $tablet) {
     margin: 0;
     min-width: 280px;
     justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 288px;
   }
 }
 
@@ -75,6 +81,7 @@
 
   @media (min-width: $desktop) {
     text-align: left;
+    min-width: 44px;
     margin-left: auto;
   }
 }
@@ -85,7 +92,8 @@
   width: 100%;
 
   @media (min-width: $tablet) {
-    margin-top: 28px;
+    margin-top: 21px;
+    line-height: 19px;
   }
 
   @media (min-width: $desktop) {

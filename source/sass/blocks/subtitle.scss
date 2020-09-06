@@ -1,0 +1,57 @@
+.subtitle {
+  @include text-title;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $basic-white;
+    height: 4px;
+    width: calc(100% + 20px + 24px);
+    z-index: -1;
+    left: -20px;
+    top: 15px;
+
+    @media (min-width: $tablet) {
+      top: 21px;
+      left: -40px;
+      width: calc(100% + 40px + 40px);
+    }
+
+    @media (min-width: $desktop) {
+      top: 21px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $basic-green;
+    height: 2px;
+    width: 100vw;
+    z-index: -2;
+    top: 16px;
+    transform: translateX(-20px);
+
+    @media (min-width: $tablet) {
+      top: 22px;
+      transform: translateX(-70px);
+    }
+
+    @media (min-width: $desktop) {
+      top: 22px;
+      transform: translateX(calc(calc(calc(100vw - 1220px) / 2) * -1));
+    }
+  }
+}

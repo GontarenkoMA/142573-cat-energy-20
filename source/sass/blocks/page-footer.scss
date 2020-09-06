@@ -12,12 +12,12 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 55px;
+    padding-top: 54px;
     padding-bottom: 61px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 57px;
+    padding-top: 58px;
     padding-bottom: 58px;
   }
 }
@@ -26,11 +26,15 @@
   display: flex;
   align-self: center;
   justify-content: center;
-  margin-top: 39px;
+  margin-top: 40px;
   margin-bottom: 32px;
 
   @media (min-width: $tablet) {
     margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 4px;
   }
 
   &:hover,
@@ -57,7 +61,7 @@
   border-top: 1px solid $nav-border;
   border-bottom: 1px solid $nav-border;
   margin: 0;
-  padding: 20px 0 21px;
+  padding: 22px 0 20px;
 
   @media (min-width: $tablet) {
     flex-grow: 1;
@@ -93,8 +97,9 @@
   color: $grey-text;
   font-size: 16px;
   margin: 0;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet) {
-    margin-right: 22px;
+    margin-right: 24px;
   }
 }
