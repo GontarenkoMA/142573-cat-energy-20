@@ -36,8 +36,8 @@
 }
 
 // тут надо будет подумать о логотипах
-.page-header__logo-link,
-.page-header__title-link {
+.page-header__logo-image-link,
+.page-header__logo-text-link {
   &:hover,
   &:focus {
     opacity: $alpha80;
@@ -48,7 +48,7 @@
   }
 }
 
-.page-header__logo-link {
+.page-header__logo-image-link {
   text-align: center;
   display: flex;
   justify-content: flex-start;
@@ -59,17 +59,19 @@
 
   @media (min-width: $tablet) {
     width: 174px;
-    height: 60px;
+    height: 52px;
     padding-bottom: 0;
+    margin-top: 13px;
   }
 
   @media (min-width: $desktop) {
     width: 202px;
     height: 60px;
+    margin-top: 6px;
   }
 }
 
-.page-header__title-link {
+.page-header__logo-text-link {
   justify-self: center;
   text-align: center;
   display: flex;
@@ -77,6 +79,7 @@
   align-content: center;
   width: 101px;
   height: 18px;
+  flex-shrink: 0;
   padding-top: 1px;
 
   @media (min-width: $tablet) {
@@ -85,6 +88,26 @@
 }
 
 .page-header__logo-image {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 34px;
+  height: 38px;
+
+  @media (min-width: $tablet) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
+    height: 60px;
+  }
+}
+
+.page-header__logo-text {
   display: block;
   margin-top: auto;
   margin-bottom: auto;
@@ -136,7 +159,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
 
   &--nojs {
