@@ -16,7 +16,9 @@
   }
 }
 
-$background-range: $desktop - 110px - 570px + 570px*0.5;
+$range-input: 50%;
+
+$background-range: $desktop - 110px - 570px + 570px * $range-input / 100%;
 
 .example__wrapper {
   display: grid;
@@ -30,7 +32,7 @@ $background-range: $desktop - 110px - 570px + 570px*0.5;
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 440px 570px;
+    grid-template-columns: 440px 610px;
     padding-top: 2px;
     padding-bottom: 68px;
     justify-content: space-between;
@@ -205,7 +207,7 @@ $background-range: $desktop - 110px - 570px + 570px*0.5;
 
 .example__widget {
   text-align: center;
-  margin-top: 42px;
+  margin-top: 34px;
 
   @media (min-width: $tablet) {
     grid-column: 1 / span 2;
@@ -222,9 +224,11 @@ $background-range: $desktop - 110px - 570px + 570px*0.5;
 .example__pictures-wrapper {
   height: 264px;
   position: relative;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet) {
     height: 560px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
@@ -233,16 +237,78 @@ $background-range: $desktop - 110px - 570px + 570px*0.5;
   }
 }
 
-.example__picture {
+.example__picture-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  // --before {
-  // }
-  //
-  // --after {
-  // }
+  display: none;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+
+  &--active {
+    display: flex;
+  }
+
+  &--before {
+    @media (min-width: $tablet) {
+      clip-path: polygon(-40px 0, $range-input 0, $range-input 100%, -40px 100%);
+    }
+  }
+
+  &--after {
+    @media (min-width: $tablet) {
+      clip-path: polygon(100% -40px, $range-input -40px, $range-input 100%, 100% 100%);
+    }
+  }
+}
+
+.example__picture {
+  display: block;
+  margin: auto;
+  width: 320px;
+  height: 240px;
+  max-width: 320px;
+
+  @media (min-width: $tablet) {
+    width: 690px;
+    height: 517px;
+    max-width: 690px;
+  }
+
+  &--before {
+    @media (min-width: $tablet) {
+      margin-top: 23px;
+      margin-right: 0;
+      margin-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 2px;
+      margin-right: 40px;
+      margin-left: 0;
+    }
+  }
+
+  &--after {
+    margin-top: 10px;
+    margin-right: 12px;
+
+    @media (min-width: $tablet) {
+      margin-top: 23px;
+      margin-right: 0;
+      margin-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 1px;
+      margin-right: 40px;
+      margin-left: 0;
+    }
+  }
 }
 
 .example__controls {
@@ -255,7 +321,7 @@ $background-range: $desktop - 110px - 570px + 570px*0.5;
   margin-left: 5px;
 
   @media (min-width: $desktop) {
-    margin-left: auto;
+    margin-left: 40px;
     column-gap: 20px;
   }
 }
@@ -341,6 +407,11 @@ $background-range: $desktop - 110px - 570px + 570px*0.5;
   top: 4px;
   left: 6px;
   cursor: pointer;
+
+  &--switched {
+    left: unset;
+    right: 6px;
+  }
 
   @media (min-width: $tablet) {
     width: 34px;

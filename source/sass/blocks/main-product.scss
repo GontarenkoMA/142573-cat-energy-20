@@ -23,9 +23,12 @@
 
 .main-product__picture-wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 140px;
   height: 112px;
   grid-row: 1 / span 2;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     width: 100%;
@@ -42,13 +45,47 @@
 }
 
 .main-product__picture {
+  display: block;
+  position: relative;
   margin: auto;
-  //
-  // @media (min-width: $tablet) {
-  // }
-  //
-  // @media (min-width: $desktop) {
-  // }
+  margin-bottom: 0;
+  box-sizing: content-box;
+  width: 140px;
+  height: 144px;
+
+  @media (min-width: $tablet) {
+    width: 324px;
+    max-width: 324px;
+    height: 208px;
+    padding-top: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
+    max-width: 245px;
+    height: 208px;
+    padding-top: 0;
+  }
+
+  &--small {
+    padding-top: 14px;
+    width: 130px;
+    height: auto;
+
+    @media (min-width: $tablet) {
+      padding-top: 42px;
+      width: 324px;
+      max-width: 324px;
+      height: 172px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 245px;
+      max-width: 245px;
+      height: 172px;
+      padding-top: 30px;
+    }
+  }
 }
 
 .main-product__title {

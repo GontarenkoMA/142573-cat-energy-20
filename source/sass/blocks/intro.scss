@@ -72,22 +72,25 @@
 }
 
 .intro__picture {
+  display: block;
   margin-bottom: 3px;
+  width: 280px;
 
   @media (min-width: $tablet) {
     justify-self: center;
     grid-row: 4;
     position: absolute;
     z-index: -1;
-    top: -77px;
+    top: -29px;
+    right: calc(50% - calc(708px / 2));
     width: 709px;
   }
 
   @media (min-width: $desktop) {
     grid-row: 1;
     top: 0;
-    left: 448px;
-    width: 552px;
+    left: 559px;
+    width: 550px;
   }
 }
 
@@ -124,6 +127,14 @@
   width: 100%;
   left: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: $mobile + 1px) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet) {
     display: none;
   }
@@ -136,5 +147,9 @@
     right: 0;
     height: 694px;
     width: 50%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
