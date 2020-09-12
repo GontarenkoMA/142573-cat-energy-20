@@ -106,7 +106,7 @@ exports.clean = clean;
 // Build
 
 const build = gulp.series(
-  clean, copy, css, images, sprite, makewebp, html
+  clean, copy, styles, images, sprite, makewebp, html
 );
 
 exports.build = build;
