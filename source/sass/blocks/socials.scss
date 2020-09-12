@@ -64,6 +64,10 @@
     }
   }
 
+  .socials__logo {
+    fill: $footer-icon;
+  }
+
   &:hover .socials__logo,
   &:focus .socials__logo,
   &:active .socials__logo {

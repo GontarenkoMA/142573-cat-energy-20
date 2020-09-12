@@ -81,6 +81,10 @@
     margin: 0;
   }
 
+  .page-footer__copyright-logo {
+    fill: $footer-icon;
+  }
+
   &:hover .page-footer__copyright-logo,
   &:focus .page-footer__copyright-logo,
   &:active .page-footer__copyright-logo {
