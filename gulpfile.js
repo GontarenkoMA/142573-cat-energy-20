@@ -18,7 +18,7 @@ const images = () => {
   return gulp.src("build/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]));
 }
@@ -38,13 +38,13 @@ exports.sprite = sprite;
 
 // Webp
 
-const webp = () => {
+const makewebp = () => {
   return gulp.src("build/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
 
-exports.webp = webp;
+exports.makewebp = makewebp;
 
 // Styles
 
@@ -105,15 +105,11 @@ exports.clean = clean;
 
 // Build
 
-const build = () => gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "images",
-  "sprite",
-  "webp",
-  "html"
+const build = gulp.series(
+  clean, copy, css, images, sprite, makewebp, html
 );
+
+exports.build = build;
 
 // Server
 
@@ -137,6 +133,8 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
+
+exports.watcher = watcher;
 
 // Start
 
