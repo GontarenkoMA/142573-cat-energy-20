@@ -489,8 +489,7 @@ input {
     outline-offset: -2px;
   }
 
-  &:-moz-ui-invalid,
-  &:-moz-submit-invalid {
+  &--error {
     // border-color: $basic-red;
     // border-width: 2px;
     outline: 2px solid $basic-red;
@@ -506,7 +505,7 @@ input {
     fill: $basic-green;
   }
 
-  &:-moz-ui-invalid + .form__input-icon {
+  &--error + .form__input-icon {
     fill: $basic-red;
   }
 
