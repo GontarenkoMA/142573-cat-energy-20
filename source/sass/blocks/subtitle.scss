@@ -27,10 +27,6 @@
       left: -40px;
       width: calc(100% + 40px + 40px);
     }
-
-    @media (min-width: $desktop) {
-      top: 21px;
-    }
   }
 
   &::after {
@@ -49,8 +45,11 @@
       transform: translateX(-70px);
     }
 
+    @media (min-width: $desktop - (110px - 30px) * 2) {
+      transform: translateX(calc(calc(calc(100vw - 1220px) / 2) * -1 - 40px));
+    }
+
     @media (min-width: $desktop) {
-      top: 22px;
       transform: translateX(calc(calc(calc(100vw - 1220px) / 2) * -1));
     }
   }

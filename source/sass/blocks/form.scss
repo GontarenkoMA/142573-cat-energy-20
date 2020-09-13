@@ -312,8 +312,8 @@
     opacity: 0;
     width: 13.5px;
     height: 13.5px;
-    left: 9.25px;
-    top: 9.25px;
+    left: 8.25px;
+    top: 8.25px;
 
     @media (min-width: $tablet) {
       width: 18px;
@@ -475,7 +475,7 @@ input {
     border-color: $grey-border;
   }
   //
-  // &:hover + .form__input-icon path {
+  // &:hover + .form__input-icon {
   // }
 
   &:active,
@@ -496,16 +496,16 @@ input {
     outline-offset: -2px;
   }
 
-  & + .form__input-icon path {
+  & + .form__input-icon {
     fill: $grey-dark-text;
   }
 
-  &:focus + .form__input-icon path,
-  &:active + .form__input-icon path {
+  &:focus + .form__input-icon,
+  &:active + .form__input-icon {
     fill: $basic-green;
   }
 
-  &--error + .form__input-icon path {
+  &--error + .form__input-icon {
     fill: $basic-red;
   }
 
