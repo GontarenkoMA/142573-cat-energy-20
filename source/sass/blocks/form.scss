@@ -485,7 +485,7 @@ input {
     // border-color: $grey-text;
     // border-width: 2px;
     // padding: 10px 18px;
-    outline: none;
+    // outline: none;
     outline: 2px solid $grey-text;
     outline-offset: -2px;
   }
@@ -493,7 +493,7 @@ input {
   &:-moz-submit-invalid {
     // border-color: $basic-red;
     // border-width: 2px;
-    outline: none;
+    // outline: none;
     outline: 2px solid $basic-red;
     outline-offset: -2px;
   }
