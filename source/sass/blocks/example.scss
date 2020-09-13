@@ -23,7 +23,7 @@ $background-range: $desktop - 110px - 570px + 570px * $range-input / 100%;
 .example__wrapper {
   display: grid;
   padding-top: 27px;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
@@ -328,10 +328,12 @@ $background-range: $desktop - 110px - 570px + 570px * $range-input / 100%;
 
 .example__button {
   @include text-title;
+  position: relative;
   margin: 0;
   padding: 0;
   padding-bottom: 5px;
   border-style: none;
+  border-bottom: 1px solid transparent;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -355,14 +357,41 @@ $background-range: $desktop - 110px - 570px + 570px * $range-input / 100%;
   }
 
   &:active {
-    border-bottom: none;
+    border-bottom: 1px solid transparent;
   }
-  //
-  // --before {
-  // }
-  //
-  // --after {
-  // }
+
+  &::before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 35px;
+    height: 6px;
+    background-color: $basic-green;
+    border-radius: 3px;
+    z-index: 2;
+    top: 7px;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &--before::before {
+    right: -59px;
+  }
+
+  &--after::before {
+    left: -59px;
+  }
+}
+
+input {
+  &:checked + .example__button--before::before,
+  &:checked + .example__button--after::before {
+    opacity: 1;
+  }
 }
 
 .example__range-wrapper {
@@ -397,23 +426,23 @@ $background-range: $desktop - 110px - 570px + 570px * $range-input / 100%;
 }
 
 .example__range-control {
+  display: none;
   position: absolute;
-  display: block;
   box-sizing: border-box;
-  width: 35px;
-  height: 6px;
-  background-color: $basic-green;
-  border-radius: 3px;
-  top: 4px;
-  left: 6px;
-  cursor: pointer;
-
-  &--switched {
-    left: unset;
-    right: 6px;
-  }
+  // width: 35px;
+  // height: 6px;
+  // background-color: $basic-green;
+  // border-radius: 3px;
+  // top: 4px;
+  // left: 6px;
+  //
+  // &--switched {
+  //   left: unset;
+  //   right: 6px;
+  // }
 
   @media (min-width: $tablet) {
+    display: block;
     width: 34px;
     height: 34px;
     background-color: $basic-white;
@@ -422,6 +451,7 @@ $background-range: $desktop - 110px - 570px + 570px * $range-input / 100%;
     box-shadow: 0 1px 3px rgba($basic-black, 0.16);
     top: -14px;
     left: 197px;
+    cursor: pointer;
   }
 
   &::before {

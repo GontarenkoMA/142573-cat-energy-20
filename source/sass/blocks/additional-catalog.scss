@@ -32,35 +32,40 @@
 
 .additional-catalog__title {
   @media (min-width: $tablet) {
-    margin-left: 38px;
+    // margin-left: 38px;
+    margin-left: 40px;
   }
 
   @media (min-width: $desktop) {
     margin-left: 0;
   }
 
-  &::before {
-    @media (min-width: $tablet) {
-      width: calc(100% + 40px + 35px);
-      left: -38px;
-    }
-
-    @media (min-width: $desktop) {
-      top: 22px;
-      left: -40px;
-    }
-  }
-
-  &::after {
-    @media (min-width: $tablet) {
-      transform: translateX(-68px);
-    }
-
-    @media (min-width: $desktop) {
-      top: 23px;
-      transform: translateX(calc(calc(calc(100vw - 1220px) / 2) * -1));
-    }
-  }
+  // &::before {
+  //   @media (min-width: $tablet) {
+  //     width: calc(100% + 40px + 35px);
+  //     left: -38px;
+  //   }
+  //
+  //   @media (min-width: $desktop) {
+  //     top: 22px;
+  //     left: -40px;
+  //   }
+  // }
+  //
+  // &::after {
+  //   @media (min-width: $tablet) {
+  //     transform: translateX(-68px);
+  //   }
+  //
+  //   @media (min-width: $desktop - (110px - 30px) * 2) {
+  //     transform: translateX(calc(((100vw - 1220px) / 2) * -1 - 38px));
+  //   }
+  //
+  //   @media (min-width: $desktop) {
+  //     top: 23px;
+  //     transform: translateX(calc(((100vw - 1220px) / 2) * -1));
+  //   }
+  // }
 }
 
 .additional-catalog__list {

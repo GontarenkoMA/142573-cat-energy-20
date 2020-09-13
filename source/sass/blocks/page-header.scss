@@ -36,7 +36,7 @@
 }
 
 // тут надо будет подумать о логотипах
-.page-header__logo-image-link,
+.page-header__logo-picture-link,
 .page-header__logo-text-link {
   &:hover,
   &:focus {
@@ -48,7 +48,7 @@
   }
 }
 
-.page-header__logo-image-link {
+.page-header__logo-picture-link {
   text-align: center;
   display: flex;
   justify-content: flex-start;
@@ -87,7 +87,7 @@
   }
 }
 
-.page-header__logo-image {
+.page-header__logo-picture {
   display: block;
   margin-top: auto;
   margin-bottom: auto;
