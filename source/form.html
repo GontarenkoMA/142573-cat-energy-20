@@ -33,7 +33,7 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="../img/logo-desktop.svg">
                   <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
-                  <img class="page-header__logo-picture" src="../img/logo-picture-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
+                  <img class="page-header__logo-picture" src="../img/logo-graphic-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
                 </picture>
               </a>
               <a class="page-header__logo-text-link" href="index.html" title="Главная страница Кэт энерджи">
@@ -89,11 +89,11 @@
                   </label>
                   <label class="form__input-label">
                     <span class="form__input-description">Вес (кг):*</span>
-                    <input id="weight-field" class="form__input-field form__input-field--weight" type="number" name="weight" placeholder="&nbsp;7" autocomplete="on" required>
+                    <input id="weight-field" class="form__input-field form__input-field--weight" type="number" name="weight" placeholder="&nbsp;7" autocomplete="on" required min="0">
                   </label>
                   <label class="form__input-label">
                     <span class="form__input-description">Возраст (лет):</span>
-                    <input id="age-field" class="form__input-field form__input-field--age" type="number" name="age" placeholder="7" autocomplete="on">
+                    <input id="age-field" class="form__input-field form__input-field--age" type="number" name="age" placeholder="7" autocomplete="on" min="0">
                   </label>
                 </div>
               </fieldset>
