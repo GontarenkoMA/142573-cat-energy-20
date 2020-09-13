@@ -462,6 +462,8 @@ input {
   font-size: 16px;
   line-height: 16px;
   width: 100px;
+  box-shadow: none;
+  outline: none;
 
   @media (min-width: $tablet) {
     height: 52px;
@@ -483,15 +485,13 @@ input {
     // border-color: $grey-text;
     // border-width: 2px;
     // padding: 10px 18px;
-    // outline: none;
     outline: 2px solid $grey-text;
     outline-offset: -2px;
   }
 
-  &--error {
+  &:-moz-submit-invalid {
     // border-color: $basic-red;
     // border-width: 2px;
-    // outline: none;
     outline: 2px solid $basic-red;
     outline-offset: -2px;
   }
