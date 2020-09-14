@@ -96,7 +96,7 @@
   }
   //
   // &--nojs {
-  //   background-image: url("../img/bg-map-mobile@1x.png");
+  //   background-picture: url("../img/bg-map-mobile@1x.png");
   //   background-color: $basic-grey;
   //   background-repeat: no-repeat;
   //   background-position: center;
@@ -104,11 +104,11 @@
   //   position: relative;
   //
   //   @media (min-width: $tablet) {
-  //     background-image: url("../img/bg-map-tablet@1x.png");
+  //     background-picture: url("../img/bg-map-tablet@1x.png");
   //   }
   //
   //   @media (min-width: $desktop) {
-  //     background-image: url("../img/bg-map-desktop@1x.png");
+  //     background-picture: url("../img/bg-map-desktop@1x.png");
   //     background-size: contain;
   //   }
   //
@@ -116,7 +116,7 @@
   //     content: '';
   //     position: absolute;
   //     display: block;
-  //     background-image: url("../img/map-pin.png");
+  //     background-picture: url("../img/map-pin.png");
   //     background-color: transparent;
   //     background-repeat: no-repeat;
   //     background-size: contain;
@@ -135,7 +135,7 @@
   // }
 }
 
-.contacts__map-image {
+.contacts__map-picture {
   display: none;
   height: 362px;
   width: auto;

@@ -31,8 +31,6 @@
   @include container;
 
   &--mobile {
-    @include container;
-
     @media (min-width: $tablet) {
       @include anticontainer;
       display: contents;
@@ -40,6 +38,8 @@
   }
 
   &--tablet-desktop {
+    @include anticontainer;
+
     @media (min-width: $tablet) {
       @include container;
     }

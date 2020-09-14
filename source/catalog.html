@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог продукции</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2tBpCxnbLASCcWR2pjKGbZ6lBU7Xbv4s&callback=initMap&libraries=&v=weekly" defer></script>
     <script src="js/map.js"></script> -->
@@ -25,20 +25,20 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="container--tablet-desktop">
+      <div class="container container--tablet-desktop">
         <div class="page-header__wrapper">
-          <div class="container--mobile">
+          <div class="container container--mobile">
             <div class="page-header__top-wrapper">
-              <a class="page-header__logo-image-link" href="index.html">
+              <a class="page-header__logo-picture-link" href="index.html">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="../img/logo-desktop.svg">
                   <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
-                  <img class="page-header__logo-image" src="../img/logo-image-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
+                  <img class="page-header__logo-picture" src="../img/logo-graphic-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
                 </picture>
               </a>
               <a class="page-header__logo-text-link" href="index.html" title="Главная страница Кэт энерджи">
-                <svg class="socials__logo" width="101" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <use xlink:href="sprite.svg#logo-text"></use>
+                <svg class="page-header__logo-text" width="101" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <use xlink:href="sprite.svg#icon-s-logo-text"></use>
                 </svg>
               </a>
               <button class="page-header__nav-toggle page-header__nav-toggle--close" type="button">
@@ -74,17 +74,17 @@
         <h1 class="title page-main__title page-main__title--catalog">Каталог продукции</h1>
       </div>
 
-      <section class="container--tablet-desktop page-main__main-catalog main-catalog">
+      <section class="container container--tablet-desktop page-main__main-catalog main-catalog">
         <h2 class="visually-hidden">Основные товары</h2>
         <ul class="main-catalog__list">
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__product main-product">
                 <div class="main-product__picture-wrapper">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="../img/chicken-small-desktop@1x.webp 1x, ../img/chicken-small-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="../img/chicken-small-tablet@1x.webp 1x, ../img/chicken-small-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="../img/chicken-small-mobile@1x.webp ../img/chicken-small-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="../img/chicken-small-mobile@1x.webp, ../img/chicken-small-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="../img/chicken-small-desktop@1x.png 1x, ../img/chicken-small-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="../img/chicken-small-tablet@1x.png 1x, ../img/chicken-small-tablet@2x.png 2x">
                     <img class="main-product__picture main-product__picture--small" src="../img/chicken-small-mobile@1x.jpg" srcset="../img/chicken-small-mobile@2x.jpg 2x" width="140" height="144" alt="Кэт энерджи: Курица (500&nbsp;г)">
@@ -110,13 +110,13 @@
             </div>
           </li>
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__product main-product">
                 <div class="main-product__picture-wrapper">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="../img/chicken-big-desktop@1x.webp 1x, ../img/chicken-big-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="../img/chicken-big-tablet@1x.webp 1x, ../img/chicken-big-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="../img/chicken-big-mobile@1x.webp ../img/chicken-big-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="../img/chicken-big-mobile@1x.webp, ../img/chicken-big-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="../img/chicken-big-desktop@1x.png 1x, ../img/chicken-big-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="../img/chicken-big-tablet@1x.png 1x, ../img/chicken-big-tablet@2x.png 2x">
                     <img class="main-product__picture" src="../img/chicken-big-mobile@1x.jpg" srcset="../img/chicken-big-mobile@2x.jpg 2x" width="140" height="144" alt="Кэт энерджи: Курица (1000&nbsp;г)">
@@ -142,13 +142,13 @@
             </div>
           </li>
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__product main-product">
                 <div class="main-product__picture-wrapper">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="../img/fish-small-desktop@1x.webp 1x, ../img/fish-small-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="../img/fish-small-tablet@1x.webp 1x, ../img/fish-small-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="../img/fish-small-mobile@1x.webp ../img/fish-small-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="../img/fish-small-mobile@1x.webp, ../img/fish-small-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="../img/fish-small-desktop@1x.png 1x, ../img/fish-small-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="../img/fish-small-tablet@1x.png 1x, ../img/fish-small-tablet@2x.png 2x">
                     <img class="main-product__picture main-product__picture--small" src="../img/fish-small-mobile@1x.jpg" srcset="../img/fish-small-mobile@2x.jpg 2x" width="140" height="144" alt="Кэт энерджи: Рыба (500&nbsp;г)">
@@ -174,13 +174,13 @@
             </div>
           </li>
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__product main-product">
                 <div class="main-product__picture-wrapper">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="../img/fish-big-desktop@1x.webp 1x, ../img/fish-big-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="../img/fish-big-tablet@1x.webp 1x, ../img/fish-big-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="../img/fish-big-mobile@1x.webp ../img/fish-big-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="../img/fish-big-mobile@1x.webp, ../img/fish-big-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="../img/fish-big-desktop@1x.png 1x, ../img/fish-big-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="../img/fish-big-tablet@1x.png 1x, ../img/fish-big-tablet@2x.png 2x">
                     <img class="main-product__picture" src="../img/fish-big-mobile@1x.jpg" srcset="../img/fish-big-mobile@2x.jpg 2x" width="140" height="144" alt="Кэт энерджи: Рыба (1000&nbsp;г)">
@@ -206,13 +206,13 @@
             </div>
           </li>
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__product main-product">
                 <div class="main-product__picture-wrapper">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="../img/buckwheat-small-desktop@1x.webp 1x, ../img/buckwheat-small-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="../img/buckwheat-small-tablet@1x.webp 1x, ../img/buckwheat-small-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="../img/buckwheat-small-mobile@1x.webp ../img/buckwheat-small-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="../img/buckwheat-small-mobile@1x.webp, ../img/buckwheat-small-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="../img/buckwheat-small-desktop@1x.png 1x, ../img/buckwheat-small-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="../img/buckwheat-small-tablet@1x.png 1x, ../img/buckwheat-small-tablet@2x.png 2x">
                     <img class="main-product__picture main-product__picture--small" src="../img/buckwheat-small-mobile@1x.jpg" srcset="../img/buckwheat-small-mobile@2x.jpg 2x" width="140" height="144" alt="Кэт энерджи: Гречка (500&nbsp;г)">
@@ -238,13 +238,13 @@
             </div>
           </li>
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__product main-product">
                 <div class="main-product__picture-wrapper">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="../img/buckwheat-big-desktop@1x.webp 1x, ../img/buckwheat-big-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="../img/buckwheat-big-tablet@1x.webp 1x, ../img/buckwheat-big-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="../img/buckwheat-big-mobile@1x.webp ../img/buckwheat-big-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="../img/buckwheat-big-mobile@1x.webp, ../img/buckwheat-big-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="../img/buckwheat-big-desktop@1x.png 1x, ../img/buckwheat-big-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="../img/buckwheat-big-tablet@1x.png 1x, ../img/buckwheat-big-tablet@2x.png 2x">
                     <img class="main-product__picture" src="../img/buckwheat-big-mobile@1x.jpg" srcset="../img/buckwheat-big-mobile@2x.jpg 2x" width="140" height="144" alt="Кэт энерджи: Гречка (500&nbsp;г)">
@@ -270,13 +270,13 @@
             </div>
           </li>
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__product main-product">
                 <div class="main-product__picture-wrapper">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="../img/rice-small-desktop@1x.webp 1x, ../img/rice-small-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="../img/rice-small-tablet@1x.webp 1x, ../img/rice-small-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="../img/rice-small-mobile@1x.webp ../img/rice-small-mobile@2x.webp 2x">
+                    <source type="image/webp" srcset="../img/rice-small-mobile@1x.webp, ../img/rice-small-mobile@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="../img/rice-small-desktop@1x.png 1x, ../img/rice-small-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="../img/rice-small-tablet@1x.png 1x, ../img/rice-small-tablet@2x.png 2x">
                     <img class="main-product__picture main-product__picture--small" src="../img/rice-small-mobile@1x.jpg" srcset="../img/rice-small-mobile@2x.jpg 2x" width="140" height="144" alt="Кэт энерджи: Рис (500&nbsp;г)">
@@ -302,7 +302,7 @@
             </div>
           </li>
           <li class="main-catalog__item">
-            <div class="container--mobile">
+            <div class="container container--mobile">
               <div class="main-catalog__all-wrapper">
                 <div class="main-catalog__all-picture"></div>
                 <h3 class="main-catalog__all-title">Показать еще 100500 товаров</h3>
@@ -383,43 +383,43 @@
               <source type="image/webp" srcset="../img/bg-map-mobile@1x.webp">
               <source media="(min-width: 1440px)" srcset="../img/bg-map-desktop@1x.png">
               <source media="(min-width: 768px)" srcset="../img/bg-map-tablet@1x.png">
-              <img class="contacts__map-image contacts__map-image--nojs" src="../img/bg-map-mobile@1x.png" width="320" height="362" alt="Карта Санкт-Петербурга с указателем адреса ул. Большая Конюшенная, д. 19/8">
+              <img class="contacts__map-picture contacts__map-picture--nojs" src="../img/bg-map-mobile@1x.png" width="320" height="362" alt="Карта Санкт-Петербурга с указателем адреса ул. Большая Конюшенная, д. 19/8">
             </picture>
         </div>
       </div>
       <div class="container page-footer__wrapper">
-        <a class="page-footer__title-link" href="index.html" title="Главная страница Кэт энерджи">
-          <svg class="socials__logo" width="101" height="18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use xlink:href="sprite.svg#logo-text"></use>
+        <a class="page-footer__title-link page-footer__title-link--index" href="index.html" title="Главная страница Кэт энерджи">
+          <svg width="128" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="sprite.svg#icon-s-logo-text"></use>
           </svg>
         </a>
         <ul class="page-footer__socials socials">
           <li class="socials__item">
             <a class="socials__link socials__link--vk" href="#" title="Вконтакте">
               <svg class="socials__logo" width="23" height="13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <use xlink:href="sprite.svg#icon-vk"></use>
+                <use xlink:href="sprite.svg#icon-s-vk"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--ig" href="#" title="Инстаграм">
               <svg class="socials__logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <use xlink:href="sprite.svg#icon-insta"></use>
+                <use xlink:href="sprite.svg#icon-s-insta"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="#" title="Фейсбук">
               <svg class="socials__logo" width="22" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <use xlink:href="sprite.svg#icon-fb"></use>
+                <use xlink:href="sprite.svg#icon-s-fb"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="page-footer__copyright-link" href="#">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="page-footer__copyright-text">HTML Academy</p>
           <svg class="page-footer__copyright-logo" width="27" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use xlink:href="sprite.svg#htmlacademy"></use>
+            <use xlink:href="sprite.svg#icon-s-htmlacademy"></use>
           </svg>
         </a>
       </div>

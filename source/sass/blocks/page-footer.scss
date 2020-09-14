@@ -26,8 +26,8 @@
   display: flex;
   align-self: center;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 32px;
+  margin-top: 39px;
+  margin-bottom: 31px;
 
   @media (min-width: $tablet) {
     margin: 0;
@@ -61,7 +61,7 @@
   border-top: 1px solid $nav-border;
   border-bottom: 1px solid $nav-border;
   margin: 0;
-  padding: 22px 0 20px;
+  padding: 21px 0 19px;
 
   @media (min-width: $tablet) {
     flex-grow: 1;
