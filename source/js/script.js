@@ -35,7 +35,6 @@ window.addEventListener("keydown", function (evt) {
 });
 
 /* Карта */
-
 var mapPicture = document.querySelector(".contacts__map-picture");
 var map;
 var marker;
@@ -72,65 +71,33 @@ function initMap() {
 //     }
 // }
 //
-// var x = window.matchMedia("(max-width: 700px)")
+// var x = window.matchMedia("(max-width: 768px)");
 // myFunction(x) // Call listener function at run time
 // x.addListener(myFunction) // Attach listener function on state changes
 
 
-
-
-
 /* Проверка формы
 если есть */
-
 var contactForm = document.querySelector(".form");
 if (contactForm !== null) {
   var catName = contactForm.querySelector(".form__input-field--name");
   var catWeight = contactForm.querySelector(".form__input-field--weight");
   var userEmail = contactForm.querySelector(".form__input-field--email");
   var userPhone = contactForm.querySelector(".form__input-field--phone");
+  var submitButton = contactForm.querySelector(".form__submit-button");
 
   catName.required = false;
   catWeight.required = false;
   userEmail.required = false;
   userPhone.required = false;
 
-  contactForm.addEventListener("submit", function (evt) {
-    if (!catName.value || !catWeight.value || !userEmail.value || !userPhone.value) {
-      evt.preventDefault();
-      if (!userPhone.value) {
-        userPhone.classList.add("form__input-field--error");
-        userPhone.focus();
-        userPhone.required = true;
-      }
-      if (!userEmail.value) {
-        userEmail.classList.add("form__input-field--error");
-        userEmail.focus();
-        userEmail.required = true;
-      }
-      if (!catWeight.value) {
-        catWeight.classList.add("form__input-field--error");
-        catWeight.focus();
-        catWeight.required = true;
-      }
-      if (!catName.value) {
-        catName.classList.add("form__input-field--error");
-        catName.focus();
-        catName.required = true;
-      }
-      if (catName.required || catWeight.required || userEmail.required || userPhone.required) {
-        evt.initEvent();
-        catName.required = false;
-        catWeight.required = false;
-        userEmail.required = false;
-        userPhone.required = false;
-      }
-    }
+  submitButton.addEventListener("click", function () {
+    catName.required = true;
+    catWeight.required = true;
+    userEmail.required = true;
+    userPhone.required = true;
   });
 }
-
-
-
 
 /* Виджет "Живой пример"
 для мобильной версии

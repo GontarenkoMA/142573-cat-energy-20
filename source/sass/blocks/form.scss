@@ -477,7 +477,7 @@ input {
     outline-offset: -2px;
   }
 
-  &--error {
+  &:required:invalid {
     outline: 2px solid $basic-red;
     outline-offset: -2px;
   }
@@ -491,7 +491,7 @@ input {
     fill: $basic-green;
   }
 
-  &--error + .form__input-icon {
+  &:required:invalid + .form__input-icon {
     fill: $basic-red;
   }
 
