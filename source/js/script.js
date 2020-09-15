@@ -1,7 +1,7 @@
 /* Меню */
 var navToggle = document.querySelector(".page-header__nav-toggle");
 var mainNav = document.querySelector(".page-header__main-nav");
-var x = true;
+var isDisabled = true;
 
 navToggle.classList.remove("page-header__nav-toggle--nojs");
 navToggle.disabled = false;
@@ -9,16 +9,16 @@ mainNav.classList.remove("page-header__main-nav--nojs");
 
 navToggle.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (x) {
+  if (isDisabled) {
     mainNav.classList.add("page-header__main-nav--opened");
     navToggle.classList.add("page-header__nav-toggle--close");
     navToggle.focus();
-    x = false;
+    isDisabled = false;
   } else {
     mainNav.classList.remove("page-header__main-nav--opened");
     navToggle.classList.remove("page-header__nav-toggle--close");
     navToggle.focus();
-    x = true;
+    isDisabled = true;
   }
 });
 
@@ -29,7 +29,7 @@ window.addEventListener("keydown", function (evt) {
       mainNav.classList.remove("page-header__main-nav--opened");
       navToggle.classList.remove("page-header__nav-toggle--close");
       navToggle.focus();
-      x = true;
+      isDisabled = true;
     }
   }
 });
@@ -61,7 +61,7 @@ function initMap() {
 /* Проверка формы
 если есть */
 var contactForm = document.querySelector(".form");
-if (contactForm !== null) {
+if (contactForm) {
   var catName = contactForm.querySelector(".form__input-field--name");
   var catWeight = contactForm.querySelector(".form__input-field--weight");
   var userEmail = contactForm.querySelector(".form__input-field--email");
@@ -85,7 +85,7 @@ if (contactForm !== null) {
 для мобильной версии
 если есть */
 var exampleWidget = document.querySelector(".example__widget");
-if (exampleWidget !== null) {
+if (exampleWidget) {
   var pictureBefore = exampleWidget.querySelector(".example__picture-wrapper--before");
   var pictureAfter = exampleWidget.querySelector(".example__picture-wrapper--after");
   var buttonBefore = exampleWidget.querySelector("#example-before");
