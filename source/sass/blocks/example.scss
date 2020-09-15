@@ -466,6 +466,19 @@ input {
     cursor: pointer;
   }
 
+  &:hover,
+  &:focus {
+    @media (min-width: $tablet) {
+      box-shadow: 0 2px 4px rgba($basic-black, 0.16);
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet) {
+      border-color: $basic-green;
+    }
+  }
+
   &::before {
     content: "";
     display: none;
