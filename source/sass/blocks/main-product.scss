@@ -44,6 +44,10 @@
   }
 }
 
+.main-product__picture-link {
+  display: contents;
+}
+
 .main-product__picture {
   display: block;
   position: relative;
@@ -130,11 +134,14 @@
     width: 100%;
   }
 
-  // тут будет хрень с выравниванием и стилизацией по элементам таблицы
   td {
+    white-space: pre-wrap;
     margin: 0;
     padding: 0;
-    white-space: pre;
+  }
+
+  td:nth-child(2n-1) {
+    margin-right: 10px;
   }
 
   td:nth-child(2) {
@@ -153,10 +160,10 @@
       border-bottom: 1px solid $grey-border;
     }
   }
+}
 
-  tr:nth-child(3) td:nth-child(2) {
-    text-transform: uppercase;
-  }
+.main-product__price {
+  text-transform: uppercase;
 }
 
 .main-product__button {

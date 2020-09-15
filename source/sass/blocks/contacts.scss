@@ -94,45 +94,6 @@
   @media (min-width: $tablet) {
     height: 400px;
   }
-  //
-  // &--nojs {
-  //   background-picture: url("../img/bg-map-mobile@1x.png");
-  //   background-color: $basic-grey;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
-  //   position: relative;
-  //
-  //   @media (min-width: $tablet) {
-  //     background-picture: url("../img/bg-map-tablet@1x.png");
-  //   }
-  //
-  //   @media (min-width: $desktop) {
-  //     background-picture: url("../img/bg-map-desktop@1x.png");
-  //     background-size: contain;
-  //   }
-  //
-  //   &::before {
-  //     content: '';
-  //     position: absolute;
-  //     display: block;
-  //     background-picture: url("../img/map-pin.png");
-  //     background-color: transparent;
-  //     background-repeat: no-repeat;
-  //     background-size: contain;
-  //     background-position: center;
-  //     width: 61px;
-  //     height: 60px;
-  //     top: calc(100vw - 57vw);
-  //     left: calc(50vw - 31px);
-  //
-  //     @media (min-width: $tablet) {
-  //     }
-  //
-  //     @media (min-width: $desktop) {
-  //     }
-  //   }
-  // }
 }
 
 .contacts__map-picture {

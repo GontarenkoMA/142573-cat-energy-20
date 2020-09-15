@@ -1,9 +1,6 @@
 .page-footer {
   background: $basic-grey;
 }
-//
-// .page-footer__contacts {
-// }
 
 .page-footer__wrapper {
   display: flex;
@@ -17,8 +14,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 58px;
-    padding-bottom: 58px;
+    padding-top: 56px;
+    padding-bottom: 51px;
   }
 }
 
@@ -31,29 +28,22 @@
 
   @media (min-width: $tablet) {
     margin: 0;
+    margin-right: 115px;
+    margin-bottom: 4px;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 4px;
+    margin-right: 120px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover[href],
+  &:focus[href] {
     opacity: $alpha80;
   }
 
-  &:active {
+  &:active[href] {
     opacity: $alpha60;
-  }
-
-  &--index {
-    cursor: default;
-  }
-
-  &--index:hover,
-  &--index:focus,
-  &--index:active {
-    opacity: 1;
   }
 }
 
@@ -67,6 +57,7 @@
     flex-grow: 1;
     padding: 0;
     border: none;
+    margin-bottom: 8px;
   }
 }
 
@@ -79,6 +70,11 @@
 
   @media (min-width: $tablet) {
     margin: 0;
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 2px;
   }
 
   .page-footer__copyright-logo {
@@ -105,5 +101,7 @@
 
   @media (min-width: $tablet) {
     margin-right: 24px;
+    text-align: right;
+    width: 200px;
   }
 }

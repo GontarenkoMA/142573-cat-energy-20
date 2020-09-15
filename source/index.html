@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
-    <link href="css/style.min.css" rel="stylesheet">
-    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2tBpCxnbLASCcWR2pjKGbZ6lBU7Xbv4s&callback=initMap&libraries=&v=weekly" defer></script>
-    <script src="js/map.js"></script> -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="еда для котов, купить, похудение, диета, набор массы, интернет магазин, Санкт-Петербург">
@@ -29,10 +27,9 @@
         <div class="page-header__wrapper">
           <div class="container container--mobile">
             <div class="page-header__top-wrapper">
-              <a class="page-header__logo-picture-link">
+              <a class="page-header__logo-picture-link" title="Главная страница Кэт энерджи">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="../img/logo-desktop.svg">
-                  <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
+                  <source media="(min-width: 768px)" srcset="../img/logo-adaptive.svg">
                   <img class="page-header__logo-picture" src="../img/logo-graphic-mobile.svg" width="34" height="38" alt="Логотип Кэт энерджи">
                 </picture>
               </a>
@@ -41,12 +38,12 @@
                   <use xlink:href="sprite.svg#icon-s-logo-text"></use>
                 </svg>
               </a>
-              <button class="page-header__nav-toggle page-header__nav-toggle--close" type="button">
+              <button class="page-header__nav-toggle page-header__nav-toggle--nojs" type="button" disabled>
                 <span class="visually-hidden">Открыть меню</span>
               </button>
             </div>
           </div>
-          <nav class="page-header__main-nav main-nav">
+          <nav class="page-header__main-nav page-header__main-nav--nojs main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a class="main-nav__link main-nav__link--active main-nav__link--index">
@@ -84,7 +81,7 @@
             <source media="(min-width: 768px)" srcset="../img/index-can-tablet@1x.jpg 1x, ../img/index-can-tablet@2x.jpg 2x">
             <img class="intro__picture" src="../img/index-can-mobile@1x.png" srcset="../img/index-can-mobile@2x.png 2x"  width="280" height="271" alt="Кэт энерджи: Курица (500&nbsp;г)">
           </picture>
-          <a class="button intro__link" href="catalog.html">Подобрать программу</a>
+          <a class="button intro__link" href="form.html">Подобрать программу</a>
         </div>
         <div class="intro__background"></div>
       </section>
@@ -96,14 +93,14 @@
             <div class="programs__program-wrapper programs__program-wrapper--slim">
               <h3 class="programs__title">Похудение</h3>
               <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="programs__link" href="catalog.html">Каталог Slim</a>
+              <a class="programs__link" href="#">Каталог Slim</a>
             </div>
           </li>
           <li class="programs__item">
             <div class="programs__program-wrapper programs__program-wrapper--pro">
               <h3 class="programs__title">Набор массы</h3>
               <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programs__link" href="catalog.html">Каталог Pro</a>
+              <a class="programs__link" href="#">Каталог Pro</a>
             </div>
           </li>
         </ul>
@@ -143,7 +140,7 @@
           </dl>
           <div class="example__sum">
             <p class="example__sum-description">Затраты на питание:</p>
-            <p class="example__sum-number">&nbsp;15 000 руб.</p>
+            <p class="example__sum-number">15 000 руб.</p>
           </div>
           <div class="example__widget">
             <div class="example__pictures-wrapper">
@@ -154,7 +151,7 @@
                   <source type="image/webp" srcset="../img/before-mobile@1x.webp, ../img/before-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="../img/before-desktop@1x.png 1x, ../img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="../img/before-tablet@1x.png 1x, ../img/before-tablet@2x.png 2x">
-                  <img class="example__picture example__picture--before" src="../img/before-mobile@1x.png" srcset="../img/before-mobile@2x.png 2x" width="320" height="240" alt="Кот До: толстый кот">
+                  <img class="example__picture example__picture--before" loading="lazy" src="../img/before-mobile@1x.png" srcset="../img/before-mobile@2x.png 2x" width="320" height="240" alt="Кот До: толстый кот">
                 </picture>
               </div>
               <div class="example__picture-wrapper example__picture-wrapper--after">
@@ -164,19 +161,23 @@
                   <source type="image/webp" srcset="../img/after-mobile@1x.webp, ../img/after-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="../img/after-desktop@1x.png 1x, ../img/after-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="../img/after-tablet@1x.png 1x, ../img/after-tablet@2x.png 2x">
-                  <img class="example__picture example__picture--after" src="../img/after-mobile@1x.png" srcset="../img/after-mobile@2x.png 2x" width="320" height="240" alt="Кот До: стройный кот">
+                  <img class="example__picture example__picture--after" loading="lazy" src="../img/after-mobile@1x.png" srcset="../img/after-mobile@2x.png 2x" width="320" height="240" alt="Кот До: стройный кот">
                 </picture>
               </div>
             </div>
             <div class="example__controls">
-              <input id="example-before" class="visually-hidden" type="radio" name="example" value="before" checked>
-              <label class="example__button example__button--before" for="example-before">Было</label>
+              <div class="example__button-wrapper">
+                <input id="example-before" class="visually-hidden" type="radio" name="example" value="before" checked>
+                <label class="example__button example__button--before" for="example-before">Было</label>
+              </div>
               <div class="example__range-wrapper">
                 <div class="example__range-line"></div>
-                <div class="example__range-control"></div>
+                <div class="example__range-control example__range-control--before"></div>
               </div>
-              <input id="example-after" class="visually-hidden" type="radio" name="example" value="after">
-              <label class="example__button example__button--after" for="example-after">Стало</label>
+              <div class="example__button-wrapper">
+                <input id="example-after" class="visually-hidden" type="radio" name="example" value="after">
+                <label class="example__button example__button--after" for="example-after">Стало</label>
+              </div>
             </div>
           </div>
         </div>
@@ -201,12 +202,12 @@
               <source type="image/webp" srcset="../img/bg-map-mobile@1x.webp">
               <source media="(min-width: 1440px)" srcset="../img/bg-map-desktop@1x.png">
               <source media="(min-width: 768px)" srcset="../img/bg-map-tablet@1x.png">
-              <img class="contacts__map-picture contacts__map-picture--nojs" src="../img/bg-map-mobile@1x.png" width="320" height="362" alt="Карта Санкт-Петербурга с указателем адреса ул. Большая Конюшенная, д. 19/8">
+              <img class="contacts__map-picture contacts__map-picture--nojs" src="../img/bg-map-mobile@1x.png" loading="lazy" width="320" height="362" alt="Карта Санкт-Петербурга с указателем адреса ул. Большая Конюшенная, д. 19/8">
             </picture>
         </div>
       </div>
       <div class="container page-footer__wrapper">
-        <a class="page-footer__title-link page-footer__title-link--index" title="Главная страница Кэт энерджи">
+        <a class="page-footer__title-link" title="Главная страница Кэт энерджи">
           <svg width="128" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <use xlink:href="sprite.svg#icon-s-logo-text"></use>
           </svg>
@@ -234,7 +235,7 @@
             </a>
           </li>
         </ul>
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" title="Онлайн-курс «HTML и CSS. Адаптивная вёрстка и автоматизация»">
           <p class="page-footer__copyright-text">HTML Academy</p>
           <svg class="page-footer__copyright-logo" width="27" height="34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <use xlink:href="sprite.svg#icon-s-htmlacademy"></use>
@@ -242,5 +243,10 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/script.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2tBpCxnbLASCcWR2pjKGbZ6lBU7Xbv4s&callback=initMap&libraries=&v=weekly" defer></script>
+
   </body>
 </html>
