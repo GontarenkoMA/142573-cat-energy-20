@@ -32,40 +32,12 @@
 
 .additional-catalog__title {
   @media (min-width: $tablet) {
-    // margin-left: 38px;
     margin-left: 40px;
   }
 
   @media (min-width: $desktop) {
     margin-left: 0;
   }
-
-  // &::before {
-  //   @media (min-width: $tablet) {
-  //     width: calc(100% + 40px + 35px);
-  //     left: -38px;
-  //   }
-  //
-  //   @media (min-width: $desktop) {
-  //     top: 22px;
-  //     left: -40px;
-  //   }
-  // }
-  //
-  // &::after {
-  //   @media (min-width: $tablet) {
-  //     transform: translateX(-68px);
-  //   }
-  //
-  //   @media (min-width: $desktop - (110px - 30px) * 2) {
-  //     transform: translateX(calc(((100vw - 1220px) / 2) * -1 - 38px));
-  //   }
-  //
-  //   @media (min-width: $desktop) {
-  //     top: 23px;
-  //     transform: translateX(calc(((100vw - 1220px) / 2) * -1));
-  //   }
-  // }
 }
 
 .additional-catalog__list {
@@ -104,6 +76,7 @@
 }
 
 .additional-catalog__special-offer {
+  position: relative;
   color: $basic-white;
   background-color: $intro-green;
   font-size: 16px;
@@ -119,6 +92,8 @@
   margin-top: 24px;
   min-height: 289px;
   text-align: center;
+  padding: 187px 31px 23px 28px;
+  box-sizing: border-box;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -135,8 +110,7 @@
     text-align: left;
     align-items: center;
     margin-top: 28px;
-    padding-top: 2px;
-    padding-right: 45px;
+    padding: 35px 30px 30px 328px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
@@ -153,7 +127,7 @@
     min-width: 245px;
     text-align: center;
     align-content: flex-start;
-    padding-right: 0;
+    padding: 186px 31px 23px 28px;
     margin: 0;
 
     @media (min-resolution: 2dppx) {
@@ -164,18 +138,19 @@
   &::before {
     content: url("../img/icon-gift.svg");
     display: block;
+    position: absolute;
     height: 78px;
-    margin-top: 58px;
-    margin-bottom: 10px;
+    top: 58px;
     width: 100%;
 
     @media (min-width: $tablet) {
-      margin: 0 265px 5px 0;
+      left: 79px;
       width: 80px;
     }
 
     @media (min-width: $desktop) {
-      margin: 54px auto 53px;
+      left: 0;
+      top: 55px;
       width: 100%;
     }
   }
